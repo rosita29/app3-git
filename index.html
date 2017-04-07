@@ -1,0 +1,3400 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tercera aplicacion móvil</title>
+
+<!-- grupo CSS-->
+<link rel="stylesheet" href="css/tema-app3.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<style type="text/css">
+#apDiv1 {
+	position: absolute;
+	width: 200px;
+	height: 120px;
+	z-index: 1;
+	left: 486px;
+	top: 4628px;
+}
+</style> 
+<!-- grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js"></script>
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+<script type="text/javascript">
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head> 
+ 
+ 
+ <body onLoad="MM_preloadImages('imagenes/fe.png','imagenes/ro.png','imagenes/1libro.png','imagenes/3libro.png','imagenes/11libro.png','imagenes/9libro.png','imagenes/6libro.png','imagenes/8libro.png','imagenes/2libro.png','imagenes/4libro.png','imagenes/5libro.png')">
+     
+     <div data-role="page" id="Principal" data-theme="a">
+      <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+        <h1> Bibliografía Programación </h1>
+      </div>
+      <div data-role="main" class="ui-content"></div>
+      <div>
+      
+        <ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+        <li class="ui-first-child ui-last-child">
+           <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+              <h2> COMUNICACIONES Y REDES DE COMPUTADORAS</h2>
+              <p> William Sallings</p>
+             </a>
+           </li>
+            <li class="ui-first-child ui-last-child">
+             <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+               <h2>PROGRAMACION EN JAVA</h2>
+               <p>C. Thomas Wu</p>
+              </a>
+             </li>
+              <li class="ui-first-child ui-last-child">
+             <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+               <h2>ASP.NET 4.0</h2>
+               <p>George Shepherd</p>
+              </a>
+             </li>
+              <li class="ui-first-child ui-last-child">
+             <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r"> <h2>COMO PROGRAMAR JAVA </h2>
+             <p>Deitel</p>
+              </a>
+             </li>
+              <li class="ui-first-child ui-last-child">
+             <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+               <h2>MANTENIMIENTO Y REPARACION DE COMPUTADORAS</h2>
+              
+             <p>Montaje y reparaciòn, mantenimiento preventivo</p>
+              </a>
+             </li>
+           <li class="ui-first-child ui-last-child">
+             <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+               <h2>ESTRUCTURA DE DATOS</h2>
+               <p>Osvaldo Cairo, Silvia Guardati</p>
+              </a>
+             </li>
+             <li class="ui-first-child ui-last-child">
+               <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+               <h2>REDES DE COMPUTADORAS</h2>
+               <p>Andrew S. TANENBUM</p>
+              </a>
+            </li>
+             <li class="ui-first-child ui-last-child">
+             <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+               <h2>PROGRAMACION AVANZADA CON MICROSOFT SQL SERVER 2005</h2>
+               <p>Andrew J.Brust, Stephen Forte</p>
+              </a>
+             </li>
+              <li class="ui-first-child ui-last-child">
+             <a href="#Pagina9" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+               <h2>SISTEMAS OPERATIVOS</h2>
+               <p>Jesus Carretero Perez, Felix Garcia Caballeria, Pedro de Miguel Anasagasti, Fernando Perez Costoya</p>
+              </a>
+             </li>
+            <li class="ui-first-child ui-last-child">
+               <a href="#Pagina10" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+               <h2>FUNDAMENTOS DE REDES</h2>
+               <p>Bruce A. Hallberg</p>
+             </a>
+           </li>
+           <li class="ui-first-child ui-last-child">
+               <a href="#Pagina11" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+               <h2>VISUAL C# 2010</h2>
+               <p>Anaya</p>
+             </a>
+             </li>
+           </ul>
+           </div>
+           <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/net.png" alt="net" title="net" id="wows1_0"/></li>
+		<li><img src="data1/images/computadores.png" alt="computadores" title="computadores" id="wows1_1"/></li>
+		<li><img src="data1/images/datos.png" alt="datos" title="datos" id="wows1_2"/></li>
+		<li><img src="data1/images/fundamentos.png" alt="fundamentos" title="fundamentos" id="wows1_3"/></li>
+		<li><img src="data1/images/java.png" alt="Java" title="Java" id="wows1_4"/></li>
+		<li><img src="data1/images/reparacion.png" alt="reparacion" title="reparacion" id="wows1_5"/></li>
+		<li><img src="data1/images/programacion.png" alt="Programacion" title="Programacion" id="wows1_6"/></li>
+		<li><img src="data1/images/redes.png" alt="Redes" title="Redes" id="wows1_7"/></li>
+		<li><img src="data1/images/operativos.png" alt="operativos" title="operativos" id="wows1_8"/></li>
+		<li><a href="http://wowslider.com/vi"><img src="data1/images/server.png" alt="bootstrap slider" title="server" id="wows1_9"/></a></li>
+		<li><img src="data1/images/visual.png" alt="Visual" title="Visual" id="wows1_10"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="net"><span><img src="data1/tooltips/net.png" alt="net"/>1</span></a>
+		<a href="#" title="computadores"><span><img src="data1/tooltips/computadores.png" alt="computadores"/>2</span></a>
+		<a href="#" title="datos"><span><img src="data1/tooltips/datos.png" alt="datos"/>3</span></a>
+		<a href="#" title="fundamentos"><span><img src="data1/tooltips/fundamentos.png" alt="fundamentos"/>4</span></a>
+		<a href="#" title="Java"><span><img src="data1/tooltips/java.png" alt="Java"/>5</span></a>
+		<a href="#" title="reparacion"><span><img src="data1/tooltips/reparacion.png" alt="reparacion"/>6</span></a>
+		<a href="#" title="Programacion"><span><img src="data1/tooltips/programacion.png" alt="Programacion"/>7</span></a>
+		<a href="#" title="Redes"><span><img src="data1/tooltips/redes.png" alt="Redes"/>8</span></a>
+		<a href="#" title="operativos"><span><img src="data1/tooltips/operativos.png" alt="operativos"/>9</span></a>
+		<a href="#" title="server"><span><img src="data1/tooltips/server.png" alt="server"/>10</span></a>
+		<a href="#" title="Visual"><span><img src="data1/tooltips/visual.png" alt="Visual"/>11</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">jquery carousel</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+           <div data-role="footer" align="center" data-theme="a" data-position="fixed">
+            <div> 
+                <img src="imagenes/icon.png" width="46" height="46">
+            </div>
+            <div>
+               <h4> Aplicación Tres </h4>
+               <h4> Rosa Maria Canales Maximiliano </h4>
+            </div>
+           </div>
+           </div>
+ <div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+             <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1>Comunicaciones y Redes de Computadoras</h1>
+             </div>
+             <div data-role="content" align="center">
+               <div>
+                 <div data-role="main" class="ui-content">
+       <div data-role="collapsible" data-content-theme="false">
+          <h1>Comprar o descargar</h1>
+          <p><a href="http://www.freelibros.org/redes/comunicaciones-y-redes-de-computadores-7ma-edicion-william-stallings.html" target="_self">DESCARGAR</a></p>
+          <p><a href="https://mx.casadellibro.com/libro-comunicaciones-y-redes-de-computadores-7-ed/9788420541105/967475" target="_self">COMPRAR</a></p>
+          <div><br>
+          </div>
+          <div></div>
+          </div>
+         </div> 
+                 <p>Redes de computadoras <br>
+1  INTRODUCCIÓN&nbsp;<br>
+                    1.1 USOS DE LAS REDES DE COMPUTADORAS&nbsp;<br>
+                    1.1.1 Aplicaciones de negocios&nbsp;<br>
+                    1.1.2 Aplicaciones domésticas&nbsp;<br>
+                    1.1.3 Usuarios móviles&nbsp;<br>
+                    1.1.4 Temas sociales&nbsp;<br>
+                    1.2 HARDWARE DE REDES&nbsp;<br>
+                    1.2.1 Redes de área local&nbsp;<br>
+                    1.2.2 Redes de área metropolitana&nbsp;<br>
+                    1.2.3 Redes de área amplia&nbsp;<br>
+                    1.2.4 Redes inalámbricas&nbsp;<br>
+                    1.2.5 Redes domésticas&nbsp;<br>
+                    1.2.6 Interredes&nbsp;<br>
+                    1.2 HARDWARE DE REDES&nbsp;<br>
+                    1.2.1 Redes de área local&nbsp;<br>
+                    1.2.2 Redes de área metropolitana&nbsp;<br>
+                    1.2.3 Redes de área amplia&nbsp;<br>
+                    1.2.4 Redes inalámbricas&nbsp;<br>
+                    1.2.5 Redes domésticas&nbsp;<br>
+                    1.2.6 Interredes&nbsp;<br>
+                    1.4 MODELOS DE REFERENCIA&nbsp;<br>
+                    1.4.1 El modelo de referencia OSI&nbsp;<br>
+                    1.4.2 El modelo de referencia TCP/IP&nbsp;<br>
+                    1.4.3 Comparación entre los modelos de referencia OSI y TCP/IP&nbsp;<br>
+                    1.4.4 Crítica al modelo OSI y los protocolos&nbsp;<br>
+                    1.4.5 Crítica del modelo de referencia TCP/IP&nbsp;<br>
+                    1.5 REDES DE EJEMPLO&nbsp;<br>
+                    1.5.1 Internet&nbsp;<br>
+                    1.5.2 Redes orientadas a la conexión: X.25, Frame Relay y ATM&nbsp;<br>
+                    1.5.3 Ethernet&nbsp;<br>
+                    1.5.4 LANs inalámbricas: 802.11&nbsp;<br>
+                    1.6 ESTANDARIZACIÓN DE REDES&nbsp;<br>
+                    1.6.1 Quién es quién en el mundo de las telecomunicaciones&nbsp;<br>
+                    1.6.2 Quién es quién en los estándares internacionales&nbsp;<br>
+                    1.6.3 Quién es quién en el mundo de los estándares de Internet&nbsp;<br>
+                    1.7 UNIDADES MÉTRICAS&nbsp;<br>
+                    1.8 PANORAMA DEL RESTO DEL LIBRO&nbsp;<br>
+                    1.9 RESUMEN&nbsp;<br>
+                    2 LA CAPA FÍSICA<br>
+                    2.1 LA BASE TEÓRICA DE LA COMUNICACIÓN DE DATOS&nbsp;<br>
+                    2.1.1 El análisis de Fourier&nbsp;<br>
+                    2.1.2 Señales de ancho de banda limitado&nbsp;<br>
+                    2.1.3 La tasa de datos máxima de un canal&nbsp;<br>
+                    2.2 MEDIOS DE TRANSMISIÓN GUIADOS&nbsp;<br>
+                    2.2.1 Medios magnéticos&nbsp;<br>
+                    2.2.2 Par trenzado&nbsp;<br>
+                    2.2.3 Cable coaxial&nbsp;<br>
+                    2.2.4 Fibra óptica&nbsp;<br>
+                    2.3 TRANSMISIÓN INALÁMBRICA&nbsp;<br>
+                    2.3.1 El espectro electromagnético&nbsp;<br>
+                    2.3.2 Radiotransmisión&nbsp;<br>
+                    2.3.3 Transmisión por microondas&nbsp;<br>
+                    2.3.4 Ondas infrarrojas y milimétricas&nbsp;<br>
+                    2.3.5 Transmisión por ondas de luz&nbsp;<br>
+                    2.4 SATÉLITES DE COMUNICACIONES&nbsp;<br>
+                    2.4.1 Satélites geoestacionarios&nbsp;<br>
+                    2.4.2 Satélites de Órbita Terrestre Media&nbsp;<br>
+                    2.4.3 Satélites de Órbita Terrestre Baja&nbsp;<br>
+                    2.4.4 Satélites en comparación con fibra óptica&nbsp;<br>
+                    2.5 LA RED TELEFÓNICA PÚBLICA CONMUTADA&nbsp;<br>
+                    2.5.1 Estructura del sistema telefónico&nbsp;<br>
+                    2.5.2 La política de los teléfonos&nbsp;<br>
+                    2.5.3 El circuito local: módems, ADSL e inalámbrico&nbsp;<br>
+                    2.5.4 Troncales y multiplexión&nbsp;<br>
+                    2.5.5 Conmutación<br>
+  &nbsp;<br>
+                    2.6 EL SISTEMA TELEFÓNICO MÓVIL&nbsp;<br>
+                    2.6.1 Teléfonos móviles de primera generación&nbsp;<br>
+                    2.6.2 Teléfonos móviles de segunda generación: voz digital&nbsp;<br>
+                    2.6.3 Teléfonos móviles de tercera generación: voz y datos digitales&nbsp;<br>
+  <br>
+                    2.7 TELEVISIÓN POR CABLE 169&nbsp;<br>
+                    2.7.1 Televisión por antena comunal&nbsp;<br>
+                    2.7.2 Internet a través de cable&nbsp;<br>
+                    2.7.3 Asignación de espectro&nbsp;<br>
+                    2.7.4 Módems de cable&nbsp;<br>
+                    2.7.5 ADSL en comparación con el cable&nbsp;<br>
+  <br>
+                    2.8 RESUMEN&nbsp;<br>
+  <br>
+                    3 LA CAPA DE ENLACE DE DATOS&nbsp;<br>
+                    3.1 CUESTIONES DE DISEÑO DE LA CAPA DE ENLACE DE DATOS&nbsp;<br>
+                    3.1.1 Servicios proporcionados a la capa de red&nbsp;<br>
+                    3.1.2 Entramado&nbsp;<br>
+                    3.1.3 Control de errores&nbsp;<br>
+                    3.1.4 Control de flujo&nbsp;<br>
+                    3.2 DETECCIÓN Y CORRECCIÓN DE ERRORES&nbsp;<br>
+                    3.2.1 Códigos de corrección de errores&nbsp;<br>
+                    3.2.2 Códigos de detección de errores&nbsp;<br>
+                    3.3 PROTOCOLOS ELEMENTALES DE ENLACE DE DATOS&nbsp;<br>
+                    3.3.1 Un protocolo símplex sin restricciones&nbsp;<br>
+                    3.3.2 Protocolo símplex de parada y espera&nbsp;<br>
+                    3.3.3 Protocolo símplex para un canal con ruido&nbsp;<br>
+                    3.4 PROTOCOLOS DE VENTANA CORREDIZA&nbsp;<br>
+                    3.4.1 Un protocolo de ventana corrediza de un bit&nbsp;<br>
+                    3.4.2 Protocolo que usa retroceso N&nbsp;<br>
+                    3.4.3 Protocolo que utiliza repetición selectiva&nbsp;<br>
+                    3.5 VERIFICACIÓN DE LOS PROTOCOLOS&nbsp;<br>
+                    3.5.1 Modelos de máquinas de estado finito&nbsp;<br>
+                    3.5.2 Modelos de red de Petri&nbsp;<br>
+                    3.6 EJEMPLOS DE PROTOCOLOS DE ENLACE DE DATOS&nbsp;<br>
+                    3.6.1 HDLC—Control de Enlace de Datos de Alto Nivel&nbsp;<br>
+                    3.6.2 La capa de enlace de datos en Internet&nbsp;<br>
+                    3.7 RESUMEN&nbsp;<br>
+                    4 LA SUBCAPA DE  CONTROL DE ACCESO AL MEDIO&nbsp;<br>
+                    4.1 EL PROBLEMA DE ASIGNACIÓN DEL CANAL&nbsp;<br>
+                    4.1.1 Asignación estática de canal en LANs y MANs&nbsp;<br>
+                    4.1.2 Asignación dinámica de canales en LANs y MANs&nbsp;<br>
+                    4.2 PROTOCOLOS DE ACCESO MÚLTIPLE&nbsp;<br>
+                    4.2.1 ALOHA&nbsp;<br>
+                    4.2.2 Protocolos de acceso múltiple con detección de portadora&nbsp;<br>
+                    4.2.3 Protocolos libres de colisiones&nbsp;<br>
+                    4.2.4 Protocolos de contención limitada&nbsp;<br>
+                    4.2.5 Protocolos de acceso múltiple por división de longitud de onda&nbsp;<br>
+                    4.2.6 Protocolos de LANs inalámbricas&nbsp;<br>
+                    4.3  ETHERNET&nbsp;<br>
+                    4.3.1 Cableado Ethernet&nbsp;<br>
+                    4.3.2 Codificación Manchester&nbsp;<br>
+                    4.3.3 El protocolo de subcapa MAC de Ethernet&nbsp;<br>
+                    4.3.4 Algoritmo de retroceso exponencial binario&nbsp;<br>
+                    4.3.5 Desempeño de Ethernet&nbsp;<br>
+                    4.3.6 Ethernet conmutada&nbsp;<br>
+                    4.3.7 Fast Ethernet&nbsp;<br>
+                    4.3.8 Gigabit Ethernet&nbsp;<br>
+                    4.3.9 Estándar IEEE 802.2: control lógico del enlace&nbsp;<br>
+                    4.3.10 Retrospectiva de Ethernet&nbsp;<br>
+                    4.4 LANS INALÁMBRICAS&nbsp;<br>
+                    4.4.1 La pila de protocolos del 802.11&nbsp;<br>
+                    4.4.2 La capa física del 802.11&nbsp;<br>
+                    4.4.3 El protocolo de la subcapa MAC del 802.11&nbsp;<br>
+                    4.4.4 La estructura de trama 802.11&nbsp;<br>
+                    4.4.5 Servicios&nbsp;<br>
+                    4.5 BANDA ANCHA  INALÁMBRICA&nbsp;<br>
+                    4.5.1 Comparación entre los estándares 802.11 y 802.16&nbsp;<br>
+                    4.5.2 La pila de protocolos del estándar 802.16&nbsp;<br>
+                    4.5.3 La capa física del estándar 802.16 306&nbsp;<br>
+                    4.5.4 El protocolo de la subcapa MAC del 802.16&nbsp;<br>
+                    4.5.5 La estructura de trama 802.16&nbsp;<br>
+                    4.6 BLUETOOTH&nbsp;<br>
+                    4.6.1 Arquitectura de Bluetooth&nbsp;<br>
+                    4.6.2 Aplicaciones de Bluetooth&nbsp;<br>
+                    4.6.3 La pila de protocolos de Bluetooth&nbsp;<br>
+                    4.6.4 La capa de radio de Bluetooth 314&nbsp;<br>
+                    4.6.5 La capa de banda base de Bluetooth&nbsp;<br>
+                    4.6.6 La capa L2CAP de Bluetooth&nbsp;<br>
+                    4.6.7 Estructura de la trama de Bluetooth&nbsp;<br>
+                    4.7 CONMUTACIÓN EN LA CAPA DE ENLACE DE DATOS&nbsp;<br>
+                    4.7.1 Puentes de 802.x a 802.y&nbsp;<br>
+                    4.7.2 Interconectividad local&nbsp;<br>
+                    4.7.3 Puentes con árbol de expansión&nbsp;<br>
+                    4.7.4 Puentes remotos&nbsp;<br>
+                    4.7.5 Repetidores, concentradores, puentes, conmutadores, enrutadores y puertas  de enlace&nbsp;<br>
+                    4.7.6 LANs virtuales&nbsp;<br>
+  <br>
+                    4.8 RESUMEN&nbsp;&nbsp;<br>
+                    5 LA CAPA DE RED&nbsp;<br>
+                    5.1 ASPECTOS DE DISEÑO DE LA CAPA DE RED&nbsp;<br>
+                    5.1.1 Conmutación de paquetes de almacenamiento y reenvío&nbsp;<br>
+                    5.1.2 Servicios proporcionados a la capa de transporte&nbsp;<br>
+                    5.1.3 Implementación del servicio no orientado a la conexión&nbsp;<br>
+                    5.1.4 Implementación del servicio orientado a la conexión&nbsp;<br>
+                    5.1.5 Comparación entre las subredes de circuitos virtuales y las de  datagramas&nbsp;<br>
+  <br>
+                    5.2 ALGORITMOS DE ENRUTAMIENTO&nbsp;<br>
+                    5.2.1 Principio de optimización&nbsp;<br>
+                    5.2.2 Enrutamiento por la ruta más corta&nbsp;<br>
+                    5.2.3 Inundación&nbsp;<br>
+                    5.2.4 Enrutamiento por vector de distancia&nbsp;<br>
+                    5.2.5 Enrutamiento por estado del enlace&nbsp;<br>
+                    5.2.6 Enrutamiento jerárquico&nbsp;<br>
+                    5.2.7 Enrutamiento por difusión&nbsp;<br>
+                    5.2.8 Enrutamiento por multidifusión&nbsp;<br>
+                    5.2.9 Enrutamiento para hosts móviles&nbsp;<br>
+                    5.2.10 Enrutamiento en redes ad hoc&nbsp;<br>
+                    5.2.11 Búsqueda de nodos en redes de igual a igual&nbsp;<br>
+  <br>
+                    5.3 ALGORITMOS DE CONTROL DE CONGESTIÓN&nbsp;<br>
+                    5.3.1 Principios generales del control de congestión&nbsp;<br>
+                    5.3.2 Políticas de prevención de congestión&nbsp;<br>
+                    5.3.3 Control de congestión en subredes de circuitos virtuales&nbsp;<br>
+                    5.3.4 Control de congestión en subredes de datagramas&nbsp;<br>
+                    5.3.5 Desprendimiento de carga&nbsp;<br>
+                    5.3.6 Control de fluctuación&nbsp;<br>
+                    5.4 CALIDAD DEL SERVICIO&nbsp;<br>
+                    5.4.1 Requerimientos&nbsp;<br>
+                    5.4.2 Técnicas para alcanzar buena calidad de servicio&nbsp;<br>
+                    5.4.3 Servicios integrados&nbsp;<br>
+                    5.4.4 Servicios diferenciados&nbsp;<br>
+                    5.4.5 Conmutación de etiquetas y MPLS&nbsp;<br>
+                    5.5 INTERCONECTIVIDAD&nbsp;<br>
+                    5.5.1 Cómo difieren las redes&nbsp;<br>
+                    5.5.2 Conexión de redes&nbsp;<br>
+                    5.5.3 Circuitos virtuales concatenados&nbsp;<br>
+                    5.5.4 Interconectividad no orientada a la conexión&nbsp;<br>
+                    5.5.5 Entunelamiento&nbsp;<br>
+                    5.5.6 Enrutamiento entre redes&nbsp;<br>
+                    5.5.7 Fragmentación&nbsp;<br>
+                    5.6 LA CAPA DE RED DE INTERNET&nbsp;<br>
+                    5.6.1 El protocolo IP&nbsp;<br>
+                    5.6.2 Direcciones IP&nbsp;<br>
+                    5.6.3 Protocolos de Control en Internet&nbsp;<br>
+                    5.6.4 OSPF—Protocolos de Enrutamiento de Puerta de Enlace Interior&nbsp;<br>
+                    5.6.5 BGP—Protocolo de Puerta de Enlace de Frontera&nbsp;<br>
+                    5.6.6 Multidifusión de Internet&nbsp;<br>
+                    5.6.7 IP móvil&nbsp;<br>
+                    5.6.8 IPv6 464<br>
+                    5.7 RESUMEN&nbsp;<br>
+                    6 LA CAPA DE  TRANSPORTE&nbsp;<br>
+                    6.1 EL SERVICIO DE TRANSPORTE&nbsp;<br>
+                    6.1.1 Servicios proporcionados a las capas superiores&nbsp;<br>
+                    6.1.2 Primitivas del servicio de transporte&nbsp;<br>
+                    6.1.3 Sockets de Berkeley&nbsp;<br>
+                    6.1.4 Un ejemplo de programación de sockets: un servidor de archivos de  Internet&nbsp;<br>
+                    6.2 ELEMENTOS DE LOS PROTOCOLOS DE TRANSPORTE&nbsp;<br>
+                    6.2.1 Direccionamiento&nbsp;<br>
+                    6.2.2 Establecimiento de una conexión&nbsp;<br>
+                    6.2.3 Liberación de una conexión&nbsp;<br>
+                    6.2.4 Control de flujo y almacenamiento en búfer&nbsp;<br>
+                    6.2.5 Multiplexión&nbsp;<br>
+                    6.2.6 Recuperación de caídas<br>
+  &nbsp;6.3 UN PROTOCOLO DE TRANSPORTE SENCILLO&nbsp;<br>
+                    6.3.1 Las primitivas de servicio de ejemplo&nbsp;<br>
+                    6.3.2 La entidad de transporte de ejemplo&nbsp;<br>
+                    6.3.3 El ejemplo como máquina de estados finitos&nbsp;<br>
+                    6.4 LOS PROTOCOLOS DE TRANSPORTE DE INTERNET: UDP&nbsp;<br>
+                    6.4.1 Introducción a UDP&nbsp;<br>
+                    6.4.2 Llamada a procedimiento remoto&nbsp;<br>
+                    6.4.3 El protocolo de transporte en tiempo real&nbsp;<br>
+                    6.5 LOS PROTOCOLOS DE TRANSPORTE DE INTERNET: TCP&nbsp;<br>
+                    6.5.1 Introducción a TCP&nbsp;<br>
+                    6.5.2 El modelo del servicio TCP&nbsp;<br>
+                    6.5.3 El protocolo TCP&nbsp;<br>
+                    6.5.4 El encabezado del segmento TCP&nbsp;<br>
+                    6.5.5 Establecimiento de una conexión TCP&nbsp;<br>
+                    6.5.6 Liberación de una conexión TCP&nbsp;<br>
+                    6.5.7 Modelado de administración de conexiones TCP&nbsp;<br>
+                    6.5.8 Política de transmisión del TCP&nbsp;<br>
+                    6.5.9 Control de congestión en TCP&nbsp;<br>
+                    6.5.10 Administración de temporizadores del TCP&nbsp;<br>
+                    6.5.11 TCP y UDP inalámbricos&nbsp;<br>
+                    6.5.12 TCP para Transacciones&nbsp;<br>
+  <br>
+                    6.6 ASPECTOS DEL DESEMPEÑO&nbsp;<br>
+                    6.6.1 Problemas de desempeño en las redes de cómputo&nbsp;<br>
+                    6.6.2 Medición del desempeño de las redes&nbsp;<br>
+                    6.6.3 Diseño de sistemas para un mejor desempeño&nbsp;<br>
+                    6.6.4 Procesamiento rápido de las TPDUs&nbsp;<br>
+                    6.6.5 Protocolos para redes de gigabits&nbsp;<br>
+                    6.7 RESUMEN&nbsp;<br>
+                    7 LA CAPA DE APLICACIÓN<br>
+  &nbsp;7.1 DNS—EL SISTEMA DE NOMBRES DE DOMINIO&nbsp;<br>
+                    7.1.1 El espacio de nombres del DNS&nbsp;<br>
+                    7.1.2 Registros de recursos&nbsp;<br>
+                    7.1.3 Servidores de nombres&nbsp;<br>
+                    7.2 CORREO ELECTRÓNICO&nbsp;<br>
+                    7.2.1 Arquitectura y servicios&nbsp;<br>
+                    7.2.2 El agente de usuario&nbsp;<br>
+                    7.2.3 Formatos de mensaje&nbsp;<br>
+                    7.2.4 Transferencia de mensajes&nbsp;<br>
+                    7.2.5 Entrega final&nbsp;<br>
+                    7.3 WORLD WIDE WEB&nbsp;<br>
+                    7.3.1 Panorama de la arquitectura&nbsp;<br>
+                    7.3.2 Documentos Web estáticos&nbsp;<br>
+                    7.3.3 Documentos Web dinámicos&nbsp;<br>
+                    7.3.4 HTTP—Protocolo de Transferencia de Hipertexto&nbsp;<br>
+                    7.3.5 Mejoras de desempeño&nbsp;<br>
+                    7.3.6 La Web inalámbrica&nbsp;<br>
+                    7.4 MULTIMEDIA&nbsp;<br>
+                    7.4.1 Introducción al audio digital&nbsp;<br>
+                    7.4.2 Compresión de audio&nbsp;<br>
+                    7.4.3 Audio de flujo continuo&nbsp;<br>
+                    7.4.4 Radio en Internet&nbsp;<br>
+                    7.4.5 Voz sobre IP&nbsp;<br>
+                    7.4.6 Introducción al vídeo&nbsp;<br>
+                    7.4.7 Compresión de vídeo&nbsp;<br>
+                    7.4.8 Vídeo bajo demanda&nbsp;<br>
+                    7.4.9 Mbone—Red dorsal de multidifusión&nbsp;<br>
+                    7.5 RESUMEN&nbsp;<br>
+                    8 SEGURIDAD EN REDES&nbsp;<br>
+                    8.1  CRIPTOGRAFÍA&nbsp;<br>
+                    8.1.1 Introducción a la criptografía&nbsp;<br>
+                    8.1.2 Cifrados por sustitución&nbsp;<br>
+                    8.1.3 Cifrados por transposición&nbsp;<br>
+                    8.1.4 Rellenos de una sola vez&nbsp;<br>
+                    8.1.5 Dos principios criptográficos fundamentales&nbsp;<br>
+                    8.2 ALGORITMOS DE  CLAVE SIMÉTRICA&nbsp;<br>
+                    8.2.1 DES—El Estándar de Encriptación de Datos&nbsp;<br>
+                    8.2.2 AES—El Estándar de Encriptación Avanzada&nbsp;<br>
+                    8.2.3 Modos de cifrado&nbsp;<br>
+                    8.2.4 Otros cifrados&nbsp;<br>
+                    8.2.5 Criptoanálisis&nbsp;<br>
+                    8.3 ALGORITMOS DE CLAVE PÚBLICA&nbsp;<br>
+                    8.3.1 El algoritmo RSA&nbsp;<br>
+                    8.3.2 Otros algoritmos de clave pública<br>
+  &nbsp;8.4 FIRMAS DIGITALES&nbsp;<br>
+                    8.4.1 Firmas de clave simétrica&nbsp;<br>
+                    8.4.2 Firmas de clave pública&nbsp;<br>
+                    8.4.3 Compendios de mensaje&nbsp;<br>
+                    8.4.4 El ataque de cumpleaños&nbsp;<br>
+                    8.5 ADMINISTRACIÓN DE CLAVES PÚBLICAS&nbsp;<br>
+                    8.5.1 Certificados&nbsp;<br>
+                    8.5.2 X.509&nbsp;<br>
+                    8.5.3 Infraestructuras de clave pública&nbsp;<br>
+                    8.6 SEGURIDAD EN LA COMUNICACIÓN&nbsp;<br>
+                    8.6.1 Ipsec&nbsp;<br>
+                    8.6.2 Firewalls&nbsp;<br>
+                    8.6.3 Redes privadas virtuales&nbsp;<br>
+                    8.6.4 Seguridad inalámbrica&nbsp;<br>
+                    8.7 PROTOCOLOS DE AUTENTICACIÓN&nbsp;<br>
+                    8.7.1 Autenticación basada en una clave secreta compartida&nbsp;<br>
+                    8.7.2 Establecimiento de una clave compartida: el intercambio de claves de  Diffie-Hellman&nbsp;<br>
+                    8.7.3 Autenticación que utiliza un centro de distribución de claves&nbsp;<br>
+                    8.7.4 Autenticación utilizando Kerberos&nbsp;<br>
+                    8.7.5 Autenticación utilizando criptografía de clave pública&nbsp;<br>
+                    8.8 SEGURIDAD DE CORREO ELECTRÓNICO&nbsp;<br>
+                    8.8.1 PGP—Privacidad Bastante Buena&nbsp;<br>
+                    8.8.2 PEM—Correo con Privacidad Mejorada&nbsp;<br>
+                    8.8.3 S/MIME<br>
+  &nbsp;<br>
+                    8.9 SEGURIDAD EN WEB&nbsp;<br>
+                    8.9.1 Amenazas&nbsp;<br>
+                    8.9.2 Asignación segura de nombres&nbsp;<br>
+                    8.9.3 SSL—La Capa de Sockets Seguros&nbsp;<br>
+                    8.9.4 Seguridad de código móvil&nbsp;<br>
+                    8.10 ASPECTOS SOCIALES&nbsp;<br>
+                    8.10.1 Privacidad&nbsp;<br>
+                    8.10.2 Libertad de expresión&nbsp;<br>
+                    8.10.3 Derechos de autor&nbsp;<br>
+                    8.11 RESUMEN&nbsp;<br>
+                    9 LISTA DE LECTURAS Y BIBLIOGRAFÍA&nbsp;<br>
+                    9.1. SUGERENCIAS DE LECTURAS ADICIONALES&nbsp;<br>
+                    9.1.1 Introducción y obras generales&nbsp;<br>
+                    9.1.2 La capa física&nbsp;<br>
+                    9.1.3 La capa de enlace de datos&nbsp;<br>
+                    9.1.4 La subcapa de control de acceso al medio&nbsp;<br>
+                    9.1.5 La capa de red&nbsp;<br>
+                    9.1.6 La capa de transporte&nbsp;<br>
+                    9.1.7 La capa de aplicación&nbsp;<br>
+                    9.1.8 Seguridad en redes</p>
+<h2>&nbsp;</h2>
+         <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('comu','','imagenes/2libro.png',1)"><img src="imagenes/libro2.png" width="199" height="264" id="comu"></a></p>
+         
+         
+               </div>
+              </div> 
+       <div data-role="footer" data-theme="a" data-position="fixed">
+                <h4> Aplicación Tres, RMCM </h4>
+              </div>
+             </div>
+            
+            
+ <div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+             <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1>PROGRAMACION EN JAVA </h1>
+             </div>
+             <div data-role="content" align="center">
+               <div>
+                  <div data-role="main" class="ui-content">
+       <div data-role="collapsible" data-content-theme="false">
+          <h1>Comprar o descargar</h1>
+          <div>
+            <p><a href="http://listado.mercadolibre.com.mx/libros/java%3A-introducci%C3%B3n-a-la-programaci%C3%B3n-en-java-de-thomas-wu"> COMPRAR</a></p>
+            <p><a href="https://www.fiuxy.co/trucos-manuales-y-guias/4595845-introduccion-la-programacion-orientada-objetos-con-java-mega-pdf.html" target="_self">ver </a></p>
+            
+            <br>
+          </div>
+          <div></div>
+          </div>
+                 </div>
+                  <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('oscar','','imagenes/4libro.png',1)"><img src="imagenes/libro4.png" width="199" height="264" id="oscar"></a></p>
+         <pre>
+      Programacion en JAVA 
+1 Introducción a las computadoras, Internet y Web 1
+1.1 Introducción 2
+1.2 ¿Qué es una computadora? 4
+1.3 Organización de una computadora 4
+1.4 Los primeros sistemas operativos 5
+1.5 Computación personal, distribuida y cliente/servidor 5
+1.6 Internet y World Wide Web 6
+1.7 Lenguajes máquina, ensambladores y de alto nivel 6
+1.8 Historia de C y C++ 7
+1.9 Historia de Java 8
+1.10 Bibliotecas de clases de Java 8
+1.11 FORTRAN, COBOL, Pascal y Ada 9
+1.12 BASIC, Visual Basic, Visual C++, C# y .NET 10
+1.13 Entorno de desarrollo típico en Java 10
+1.14 Generalidades acerca de Java y este libro 13
+1.15 Prueba de una aplicación en Java 14
+1.16 Ejemplo práctico de Ingeniería de Software: introducción a la tecnología de objetos y UML 19
+1.17 Web 2.0 23
+1.18 Tecnologías de software 24
+1.19 Conclusión 24
+1.20 Recursos Web 25
+2 Introducción a las aplicaciones en Java 34
+2.1 Introducción 35
+2.2 Su primer programa en Java: imprimir una línea de texto 35
+2.3 Modifi cación de nuestro primer programa en Java 41
+2.4 Cómo mostrar texto con printf 43
+2.5 Otra aplicación en Java: suma de enteros 44
+2.6 Conceptos acerca de la memoria 48
+2.7 Aritmética 49
+2.8 Toma de decisiones: operadores de igualdad y relacionales 52
+2.9 (Opcional) Ejemplo práctico de Ingeniería de Software: cómo examinar el documento
+de requerimientos de un problema 56
+2.10 Conclusión 65
+3 Introducción a las clases y los objetos 75
+3.1 Introducción 76
+3.2 Clases, objetos, métodos y variables de instancia 76
+00_MAQ_PRELIMINARES.indd vii 4/30/08 12:24:31 AM
+viii Contenido
+3.3 Declaración de una clase con un método e instanciamiento de un objeto de una clase 77
+3.4 Declaración de un método con un parámetro 81
+3.5 Variables de instancia, métodos establecer y métodos obtener 84
+3.6 Comparación entre tipos primitivos y tipos por referencia 88
+3.7 Inicialización de objetos mediante constructores 89
+3.8 Números de punto fl otante y el tipo double 91
+3.9 (Opcional) Ejemplo práctico de GUI y gráfi cos: uso de cuadros de diálogo 95
+3.10 (Opcional) Ejemplo práctico de Ingeniería de Software: identifi cación de las clases en un
+documento de requerimientos 98
+3.11 Conclusión 105
+4 Instrucciones de control: parte 1 112
+4.1 Introducción 113
+4.2 Algoritmos 113
+4.3 Seudocódigo 114
+4.4 Estructuras de control 114
+4.5 Instrucción de selección simple if 116
+4.6 Instrucción de selección doble if...else 117
+4.7 Instrucción de repetición while 121
+4.8 Cómo formular algoritmos: repetición controlada por un contador 123
+4.9 Cómo formular algoritmos: repetición controlada por un centinela 127
+4.10 Cómo formular algoritmos: instrucciones de control anidadas 134
+4.11 Operadores de asignación compuestos 138
+4.12 Operadores de incremento y decremento 139
+4.13 Tipos primitivos 142
+4.14 (Opcional) Ejemplo práctico de GUI y gráfi cos: creación de dibujos simples 142
+4.15 (Opconal) Ejemplo práctico de Ingeniería de Software: identifi cación de los atributos de las clases 146
+4.16 Conclusión 150
+5 Instrucciones de control: parte 2 164
+5.1 Introducción 165
+5.2 Fundamentos de la repetición controlada por contador 165
+5.3 Instrucción de repetición for 167
+5.4 Ejemplos sobre el uso de la instrucción for 171
+5.5 Instrucción de repetición do...while 174
+5.6 Instrucción de selección múltiple switch 176
+5.7 Instrucciones break y continue 183
+5.8 Operadores lógicos 185
+5.9 Resumen sobre programación estructurada 190
+5.10 (Opcional) Ejemplo práctico de GUI y gráfi cos: dibujo de rectángulos y óvalos 194
+5.11 (Opcional) Ejemplo práctico de Ingeniería de Software: cómo identifi car los estados
+y actividades de los objetos 197
+5.12 Conclusión 200
+6 Métodos: un análisis más detallado 211
+6.1 Introducción 212
+6.2 Módulos de programas en Java 212
+6.3 Métodos static, campos static y la clase Math 214
+6.4 Declaración de métodos con múltiples parámetros 216
+6.5 Notas acerca de cómo declarar y utilizar los métodos 219
+6.6 Pila de llamadas a los métodos y registros de activación 221
+6.7 Promoción y conversión de argumentos 221
+00_MAQ_PRELIMINARES.indd viii 4/30/08 12:24:32 AM
+Contenido ix
+6.8 Paquetes de la API de Java 222
+6.9 Ejemplo práctico: generación de números aleatorios 224
+6.9.1 Escalamiento y desplazamiento generalizados de números aleatorios 227
+6.9.2 Repetitividad de números aleatorios para prueba y depuración 227
+6.10 Ejemplo práctico: un juego de probabilidad (introducción a las enumeraciones) 228
+6.11 Alcance de las declaraciones 232
+6.12 Sobrecarga de métodos 235
+6.13 (Opcional) Ejemplo práctico de GUI y gráfi cos: colores y fi guras rellenas 238
+6.14 (Opcional) Ejemplo práctico de Ingeniería de Software: identifi cación de las operaciones
+de las clases 241
+6.15 Conclusión 246
+7 Arreglos 260
+7.1 Introducción 261
+7.2 Arreglos 261
+7.3 Declaración y creación de arreglos 262
+7.4 Ejemplos acerca del uso de los arreglos 264
+7.5 Ejemplo práctico: simulación para barajar y repartir cartas 272
+7.6 Instrucción for mejorada 274
+7.7 Paso de arreglos a los métodos 276
+7.8 Ejemplo práctico: la clase LibroCalificaciones que usa un arreglo para
+almacenar las califi caciones 279
+7.9 Arreglos multidimensionales 284
+7.10 Ejemplo práctico: la clase LibroCalificaciones que usa un arreglo bidimensional 288
+7.11 Listas de argumentos de longitud variable 293
+7.12 Uso de argumentos de línea de comandos 294
+7.13 (Opcional) Ejemplo práctico de GUI y gráfi cos: cómo dibujar arcos 296
+7.14 (Opcional) Ejemplo práctico de Ingeniería de Software: colaboración entre los objetos 299
+7.15 Conclusión 305
+8 Clases y objetos: un análisis más detallado 325
+8.1 Introducción 326
+8.2 Ejemplo práctico de la clase Tiempo 327
+8.3 Control del acceso a los miembros 330
+8.4 Referencias a los miembros del objeto actual mediante this 331
+8.5 Ejemplo práctico de la clase Tiempo: constructores sobrecargados 333
+8.6 Constructores predeterminados y sin argumentos 338
+8.7 Observaciones acerca de los métodos Establecer y Obtener 338
+8.8 Composición 340
+8.9 Enumeraciones 342
+8.10 Recolección de basura y el método finalize 345
+8.11 Miembros de clase static 345
+8.12 Declaración static import 350
+8.13 Variables de instancia final 351
+8.14 Reutilización de software 353
+8.15 Abstracción de datos y encapsulamiento 354
+8.16 Ejemplo práctico de la clase Tiempo: creación de paquetes 355
+8.17 Acceso a paquetes 360
+8.18 (Opcional) Ejemplo práctico de GUI y gráfi cos: uso de objetos con gráfi cos 361
+8.19 (Opcional) Ejemplo práctico de Ingeniería de Software: inicio de la programación de las clases
+del sistema ATM 364
+8.20 Conclusión 369
+00_MAQ_PRELIMINARES.indd ix 4/30/08 12:24:32 AM
+x Contenido
+9 Programación orientada a objetos: herencia 378
+9.1 Introducción 379
+9.2 Superclases y subclases 380
+9.3 Miembros protected 382
+9.4 Relación entre las superclases y las subclases 382
+9.4.1 Creación y uso de una clase EmpleadoPorComision 383
+9.4.2 Creación de una clase EmpleadoBaseMasComision sin usar la herencia 387
+9.4.3 Creación de una jerarquía e herencia EmpleadoPorComision-
+EmpleadoBaseMasComision 391
+9.4.4 La jerarquía de herencia EmpleadoPorComision-EmpleadoBaseMasComision
+mediante el uso de variables de instancia protected 394
+9.4.5 La jerarquía de herencia EmpleadoPorComision-EmpleadoBaseMasComision
+mediante el uso de variables de instancia private 399
+9.5 Los constructores en las subclases 404
+9.6 Ingeniería de software mediante la herencia 409
+9.7 La clase object 410
+9.8 (Opcional) Ejemplo práctico de GUI y gráfi cos: mostar texto e imágenes usando etiquetas 411
+9.9 Conclusión 413
+10 Programación orientada a objetos: polimorfi smo 417
+10.1 Introducción 418
+10.2 Ejemplos del polimorfi smo 419
+10.3 Demostración del comportamiento polimórfi co 420
+10.4 Clases y métodos abstractos 423
+10.5 Ejemplo práctico: sistema de nómina utilizando polimorfi smo 425
+10.5.1 Creación de la superclase abstracta Empleado 426
+10.5.2 Creación de la subclase concreta EmpleadoAsalariado 426
+10.5.3 Creación de la subclase concreta EmpleadoPorHoras 429
+10.5.4 Creación de la subclase concreta EmpleadoPorComision 431
+10.5.5 Creación de la subclase concreta indirecta EmpleadoBaseMasComision 432
+10.5.6 Demostración del procesamiento polimórfi co, el operador instanceof y
+la conversión descendente 433
+105.7 Resumen de las asignaciones permitidas entre variables de la superclase y de la subclase 437
+10.6 Métodos y clases final 438
+10.7 Ejemplo práctico: creación y uso de interfaces 439
+10.7.1 Desarrollo de una jerarquía PorPagar 440
+10.7.2 Declaración de la interfaz PorPagar 441
+10.7.3 Creación de la clase Factura 441
+10.7.4 Modifi cación de la clase Empleado para implementar la interfaz PorPagar 443
+10.7.5 Modifi cación de la clase EmpleadoAsalariado para usarla en la jerarquía PorPagar 445
+10.7.6 Uso de la interfaz PorPagar para procesar objetos Factura y Empleado
+mediante el polimorfi smo 446
+10.7.7 Declaración de constantes con interfaces 448
+10.7.8 Interfaces comunes de la API de Java 448
+10.8 (Opcional) Ejemplo práctico de GUI y gráfi cos: realizar dibujos mediante el polimorfi smo 449
+10.9 (Opcional) Ejemplo práctico de Ingeniería de Software: incorporación de la herencia en
+el sistema ATM 451
+10.10 Conclusión 457
+00_MAQ_PRELIMINARES.indd x 4/30/08 12:24:33 AM
+Contenido xi
+11 Componentes de la GUI: parte 1 462
+11.1 Introducción 463
+11.2 Entrada/salida simple basada en GUI con JOptionPane 464
+11.3 Generalidades de los componentes de Swing 467
+11.4 Mostrar texto e imágenes en una ventana 469
+11.5 Campos de texto y una introducción al manejo de eventos con clases anidadas 474
+11.6 Tipos de eventos comunes de la GUI e interfaces de escucha 479
+11.7 Cómo funciona el manejo de eventos 481
+11.8 JButton 483
+11.9 Botones que mantienen el estado 486
+11.9.1 JCheckBox 486
+11.9.2 JRadioButton 489
+11.10 JComboBox y el uso de una clase interna anónima para el manejo de eventos 492
+11.11 JList 495
+11.12 Listas de selección múltiple 497
+11.13 Manejo de eventos de ratón 500
+11.14 Clases adaptadoras 504
+11.15 Subclase de JPanel para dibujar con el ratón 507
+11.16 Manejo de eventos de teclas 510
+11.17 Administradores de esquemas 513
+11.17.1 FlowLayout 514
+11.17.2 BorderLayout 517
+11.17.3 GridLayout 520
+11.18 Uso de paneles para administrar esquemas más complejos 522
+11.19 JTextArea 523
+11.20 Conclusión 526
+12 Gráfi cos y Java 2DTM 539
+12.1 Introducción 540
+12.2 Contextos y objetos de gráfi cos 542
+12.3 Control de colores 542
+12.4 Control de tipos de letra 548
+12.5 Dibujo de líneas, rectángulos y óvalos 554
+12.6 Dibujo de arcos 558
+12.7 Dibujo de polígonos y polilíneas 560
+12.8 La API Java 2D 563
+12.9 Conclusión 569
+13 Manejo de excepciones 578
+13.1 Introducción 579
+13.2 Generalidades acerca del manejo de excepciones 580
+13.3 Ejemplo: división entre cero sin manejo de excepciones 580
+13.4 Ejemplo: manejo de excepciones tipo ArithmeticException e InputMismatchException 582
+13.5 Cuándo utilizar el manejo de excepciones 587
+13.6 Jerarquía de excepciones en Java 587
+13.7 Bloque finally 590
+13.8 Limpieza de la pila 594
+13.9 printStackTrace, getStackTrace y getMessage 595
+13.10 Excepciones encadenadas 597
+13.11 Declaración de nuevos tipos de excepciones 599
+13.12 Precondiciones y poscondiciones 600
+00_MAQ_PRELIMINARES.indd xi 4/30/08 12:24:33 AM
+xii Contenido
+13.13 Aserciones 601
+13.14 Conclusión 602
+14 Archivos y fl ujos 608
+14.1 Introducción 609
+14.2 Jerarquía de datos 610
+14.3 Archivos y fl ujos 611
+14.4 La clase File 613
+14.5 Archivos de texto de acceso secuencial 617
+14.5.1 Creación de un archivo de texto de acceso secuencial 617
+14.5.2 Cómo leer datos de un archivo de texto de acceso secuencial 623
+14.5.3 Ejemplo práctico: un programa de solicitud de crédito 625
+14.5.4 Actualización de archivos de acceso secuencial 630
+14.6 Serialización de objetos 630
+14.6.1 Creació de un archivo de acceso secuencial mediante el uso de la serialización
+de objetos 631
+14.6.2 Lectura y deserialización de datos de un archivo de acceso secuencial 636
+14.7 Clases adicionales de java.io 638
+14.8 Abrir archivos con JFileChooser 640
+14.9 Conclusión 643
+15 Recursividad 653
+15.1 Introducción 654
+15.2 Conceptos de recursividad 655
+15.3 Ejemplo de uso de recursividad: factoriales 655
+15.4 Ejemplo de uso de recursividad: serie de Fibonacci 658
+15.5 La recursividad y la pila de llamadas a métodos 661
+15.6 Comparación entre recursividad e iteración 662
+15.7 Las torres de Hanoi 664
+15.8 Fractales 666
+15.9 “Vuelta atrás” recursiva (backtracking) 676
+15.10 Conclusión 676
+15.11 Recursos en Internet y Web 676
+16 Búsqueda y ordenamiento 685
+16.1 Introducción 686
+16.2 Algoritmos de búsqueda 687
+16.2.1 Búsqueda lineal 687
+16.2.2 Búsqueda binaria 690
+16.3 Algoritmos de ordenamiento 695
+16.3.1 Ordenamiento por selección 695
+16.3.2 Ordenamiento por inserción 699
+16.3.3 Ordenamiento por combinación 702
+16.4 Invariantes 708
+16.5 Conclusión 709
+17 Estructuras de datos 714
+17.1 Introducción 715
+17.2 Clases de envoltura de tipos para los tipos primitivos 716
+17.3 Autoboxing y autounboxing 716
+00_MAQ_PRELIMINARES.indd xii 4/30/08 12:24:34 AM
+Contenido xiii
+17.4 Clases autorreferenciadas 717
+17.5 Asignación dinámica de memoria 717
+17.6 Listas enlazadas 718
+17.7 Pilas 72
+17.8 Colas 730
+17.9 Árboles 733
+17.10 Conclusión 739
+18 Genéricos 761
+18.1 Introducción 762
+18.2 Motivación para los métodos genéricos 762
+18.3 Métodos genéricos: implementación y traducción en tiempo de compilación 764
+18.4 Cuestiones adicionales sobre la traducción en tiempo de compilación: métodos que utilizan
+un parámetro de tipo como tipo de valor de retorno 767
+18.5 Sobrecarga de métodos genéricos 770
+18.6 Clases genéricas 770
+18.7 Tipos crudos (raw) 77
+18.8 Comodines en métodos que aceptan parámetros de tipo 783
+18.9 Genéricos y herencia: observaciones 787
+18.10 Conclusión 787
+18.11 Recursos en Internet y Web 787
+19 Colecciones 79
+19.1 Introducción 793
+19.2 Generalidades acerca de las colecciones 794
+19.3 La clase Arrays 79
+19.4 La interfaz Collection y la clase Collections 797
+19.5 Listas 798
+19.5.1 ArrayList e Iterator 799
+19.5.2 LinkedList800
+19.5.3 Vector 805
+19.6 Algoritmos de las colecciones 808
+19.6.1 El algoritmo sort 809
+19.6.2 El algoritmo shuffle 812
+19.6.3 Los algoritmos reverse, fill, cpy, max y min 815
+19.6.4 El algoritmo binarySearch 816
+19.6.5 Los algoritmos addAll, frequency y disjoint 818
+19.7 La clase Stack del paquete java.util 820
+19.8 La clase PriorityQueue y la interfaz Queue 822
+19.9 Conjuntos 23
+19.10 Mapas 826
+19.11 La clase Properties 829
+19.12 Colecciones sincronizadas 832
+19.13 Colecciones no modificar cables 833
+19.14 Implementaciones abstractas 834
+19.15 Conclusión 83
+20 Introducción a los applets de Java 841
+20.1 Introducción 842
+20.2 Applets de muestra incluidos en el JDK 842
+20.3 Applet simple en Java: cómo dibujar una cadena 846
+00_MAQ_PRELIMINARES.indd xiii 4/30/08 12:24:34 AM
+xiv Contenido
+20.3.1 Cómo ejecutar un applet en el appletviewer 848
+20.3.2 Ejecución de un applet en un explorador Web 850
+20.4 Métodos del ciclo de vida de los applets 850
+20.5 Cómo inicializar una variable de instancia con el método int 851
+20.6 Modelo de seguridad “caja de arena” 853
+20.7 Recursos en Internet y Web 853
+20.8 Conclusión 854
+21 Multimedia: applets y aplicaciones 858
+21.1 Introducción 859
+21.2 Cómo cargar, mostrar y escalar imágenes 860
+21.3 Animación de una serie de imágenes 862
+21.4 Mapas de imágenes 867
+21.5 Carga y reproducción de clips de audio 869
+21.6 Reproducción de video y otros medios con el Marco de trabajo de medios de Java 872
+21.7 Conclusión 876
+21.8 Recursos Web 876
+22 Componentes de la GUI: parte 2 883
+22.1 Introduccón 884
+22.2 JSlider 884
+22.3 Ventanas: observaciones adicionales 888
+22.4 Uso de menús con marcos 889
+22.5 JPopupMenu 896
+22.6 Apariencia visual adaptable 899
+22.7 JDesktopPane y JInternalFrame 903
+22.8 JTabbedPane 906
+22.9 Administradores de esquemas: BoxLayout y GridBagLayout 908
+22.10 Conclusión 920
+23 Subprocesamiento múltiple 925
+23.1 Introducción 926
+23.2 Estados de los subprocesos: ciclo de vida de un subproceso 927
+23.3 Prioridades y programación de subprocesos 929
+23.4 Creación y ejecución de subprocesos 931
+23.4.1 Objetos Runnable y la clase Thread 931
+23.4.2 Administración de subprocesos con el marco de trabajo Executor 934
+23.5 Sincronización de subprocesos 935
+23.5.1 Cómo compartir datos sin sincronización 936
+23.5.2 Cómo compartir datos con sincronización: hacer las operaciones atómicas 940
+23.6 Relación productor/consumidor sin sincronización 943
+23.7 Relación productor/consumidor: ArrayBlockingQueue 949
+23.8 Relación productor/consumidor con sincronización 952
+23.9 Relación productor/consumidor: búferes delimitados 957
+23.10 Relación productor/consumidor: las interfaces Lock y Condition 964
+23.11 Subprocesamiento múltiple con GUIs 970
+23.11.1 Realización de cálculos en un subproceso trabajador 970
+23.11.2 Procesamiento de resultados inmediatos con SwingWorker 976
+23.12 Otras clases e interfaces en java.util.concurrent 982
+23.13 Conclusión 983
+00_MAQ_PRELIMINARES.indd xiv 4/30/08 12:24:34 AM
+Contenido xv
+24 Redes 992
+24.1 Introducción 993
+24.2 Manipulación de URLs 994
+24.3 Cómo leer un archivo en un servidor Web 998
+24.4 Cómo establecer un servidor simple utilizando sockets de fl ujo 1001
+24.5 Cómo establecer un cliente simple utilizando sockets de fl ujo 1003
+24.6 Interacción entre cliente/servidor mediante conexiones de socket de fl ujo 1004
+24.7 Interacción entre cliente/servidor sin conexión mediante datagramas 1014
+24.8 Juego de Tres en raya (Gato) tipo cliente/servidor, utilizando un servidor con
+subprocesamiento múltiple 1021
+24.9 La seguridad y la red 1034
+24.10 [Bono Web] Ejemplo práctico: servidor y cliente DeitelMessenger 1034
+24.11 Conclusión 1035
+25 Acceso a bases de datos con JDBC 1041
+25.1 Introducción 1042
+25.2 Bases de datos relacionales 1043
+25.3 Generalidades acerca de las bases de datos relacionales: la base de datos libros 1044
+25.4 SQL 1047
+25.4.1 Consulta básica SELECT 1047
+25.4.2 La cláusula WHERE 1048
+25.4.3 La cláusula ORDER BY 1050
+25.4.4 Cómo fusionar datos de varias tablas: INNER JOIN 1051
+25.4.5 La instrucción INSERT 1053
+25.4.6 La instrucción UPDATE 1053
+25.4.7 La instrucción DELETE 1054
+25.5 Instrucciones para instalar MySQL y MySQL Connector/J 1055
+25.6 Instrucciones para establecer una cuenta de usuario de MySQL 1056
+25.7 Creación de la base de datos libros en MySQL 1057
+25.8 Manipulación de bases de datos con JDBC 1057
+25.8.1 Cómo conectarse y realizar consultas en una base de datos 1057
+25.8.2 Consultas en la base de datos libros 1062
+25.9 La interfaz RowSet 1073
+25.10 Java DB/Apache Derby 1075
+25.11 Objetos PreparedStatement 1076
+25.12 Procedimientos almacenados 1090
+25.13 Procesamiento de transacciones 1091
+25.14 Conclusión 1091
+25.15 Recursos Web y lecturas recomendadas 1092
+Los capítulos 26 a 30 así como los apéndices, los encontrará en el CD que acompaña este libro.
+26 Aplicaciones Web: arte 1 1101
+26.1 Introducción 1102
+26.2 Transacciones HTTP simples 1103
+26.3 Arquitectura de aplicaciones multinivel 1105
+26.4 Tecnologías Web de Java 1106
+26.4.1 Servlets 1106
+26.4.2 JavaServer Pages 1106
+26.4.3 JavaServer Faces 1107
+26.4.4 Tecnologías Web en Java Studio Creator 2 1108
+00_MAQ_PRELIMINARES.indd xv 4/30/08 12:24:35 AM
+xvi Contenido
+26.5 Creación y ejecución de una aplicación simple en Java Studio Creator 2 1108
+26.5.1 Análisis de un archivo JSP 110
+26.5.2 Análisis de un archivo de bean de página 1111
+26.5.3 Ciclo de vida del procesamiento de eventos 1115
+26.5.4 Relación entre la JSP y los archivos de bean de página 1115
+26.5.5 Análisis del XHTML generado por una aplicación Web de Java 1115
+26.5.6 Creación de una aplicación Web en Java Studio Creator 2 1117
+26.6 Componentes JSF 1123
+26.6.1 Componentes de texto y gráfi cos 1123
+26.6.2 Validación mediante los componentes de validación y los validadores personalizados 1128
+26.7 Rastreo de sesiones 1137
+26.7.1 Cookies 1138
+26.7.2 Rastreo de sesiones con el objeto SessionBean 1150
+26.8 Conclusión 1162
+26.9 Recursos Web 1163
+27 Aplicaciones Web: parte 2 1173
+27.1 Introducción 1174
+27.2 Acceso a bases de datos en las aplicaciones Web 1174
+27.2.1 Creación de una aplicación Web que muestra datos de una base de datos 1175
+27.2.2 Modifi cación del archivo de bean de página para la aplicación LibretaDirecciones 1183
+27.3 Componentes JSF habilitados para Ajax 1185
+27.3.1 Biblioteca de componentes Java BluePrints 1186
+27.4 Autocomplete Text Field y formularios virtuales 1187
+27.4.1 Confi guración de los formularios virtuales 11
+27.4.2 Archivo JSP con formularios virtuales y un AutoComplete Text Field 1189
+27.4.3 Cómo proporcionar sugerencias para un AutoComplete Text Field 1192
+27.5 Componente Map Viewer de Google Maps 1196
+27.5.1 Cómo obtener una clave de la API Google Maps 1196
+27.5.2 Cómo agregar un componente y un Map Viewer a una página 1196
+27.5.3 Archivo JSP con un componente Map Viewer 1197
+27.5.4 Bean de página que muestra un mapa en el componente Map Viewer 1201
+27.6 Conclusión 1206
+27.7 Recursos Web 1206
+28 Servicios Web JAX-WS, Web 2.0 y Mash-ups 1212
+28.1 Introducción 1213
+28.1.1 Descarga, instalación y confi guración de Netbeans 5.5 y Sun Java System
+Application Server 1214
+28.1.2 Centro de recursos de servicios Web y Centros de recursos sobre Java
+en www.deitel.com 1215
+28.2 Fundamentos de los servicios Web de Java 1215
+28.3 Creación, publicación, prueba y descripción de un servicio Web 1216
+28.3.1 Creación de un proyecto de aplicación Web y cómo agregar una clase de servicio
+Web en Netbeans 1216
+28.3.2 Defi nición del servicio Web EnteroEnorme en Netbeans 1217
+28.3.3 Publicación del servicio Web EnteroEnorme desde Netbeans 1221
+28.3.4 Prueba del servicio Web EnteroEnorme con la página Web Tester de
+Sun Java System Application Server 1222
+28.3.5 Descripción de un servicio Web con el Lenguaje de descripción de servicios
+Web (WSDL) 1224
+00_MAQ_PRELIMINARES.indd xvi 4/30/08 12:24:35 AM
+Contenido xvii
+28.4 Cómo consumir un servicio Web 1224
+28.4.1 Creación de un cliente para consumir el servicio Web EnteroEnorme 1225
+28.4.2 Cómo consumir el servicio Web EnteroEnorme 1227
+28.5 SOAP 1234
+28.6 Rastreo de sesiones en los servicios Web 1234
+28.6.1 Creación de un servicio Web Blackjack 1235
+28.6.2 Cómo consumir el servicio Web Blackjack 1239
+28.7Cómo consumir un servicio Web controlado por base de datos desde una aplicación Web 1249
+28.7.1 Confi guración de Java DB en Netbeans y creación de la base de datos Reservacion 1249
+28.7.2 Creación de una aplicación Web para interactuar con el servicio Web Reservacion 1253
+28.8 Cómo pasar un objeto de un tipo defi nido por el usuario a un servicio Web 1258
+28.9 Conclusión 1266
+28.10 Recursos Web 1267
+29 Salida con formato 1275
+29.1 Introducción 1276
+29.2 Flujos 127
+29.3 Aplicación de formato a la salida con printf 1276
+29.4 Impresión de enteros 1277
+29.5 Impresión de números de punto fl otante 1278
+29.6 Impresión de cadenas y caracteres 1279
+29.7 Impresión de fechas y horas 1280
+29.8 Otros caracteres de conversión 1283
+29.9 Impresión con anchuras de campo y precisiones 1284
+29.10 Uso de banderas en la cadena de formato de printf 1285
+29.11 Impresión con índices como argumentos 1289
+29.12 Impresión de literales y secuencias de escape 1290
+29.13 Aplicación de formato a la salida con la clase Formatter 1290
+29.14 Conclusión 1291
+30 Cadenas, caracteres y expresiones regulares 1297
+30.1 Introducción 1298
+30.2 Fundamentos de los caracteres y las cadenas 1298
+30.3 La clase String 1299
+30.3.1 Constructores de String 1299
+30.3.2 Métodos length, charAt y getChars de String 1300
+30.3.3 Comparación entre cadenas 1301
+30.3.4 Localización de caracteres y subcadenas en las cadenas 1305
+30.3.5 Extracción de subcadenas de las cadenas 1307
+30.3.6 Concatenación de cadenas 1308
+30.3.7 Métodos varios de String 1308
+30.3.8 Método valueOf de String 1309
+30.4 La clase StringBuilder 1311
+30.4.1 Constructores de StringBuilder 1311
+30.4.2 Métodos length, capacity, setLength y ensureCapacity de StringBuilder 1312
+30.4.3 Métodos charAt, setCharAt, getChars y reverse de StringBuilder 1313
+30.4.4 Métodos append de StringBuilder 1314
+30.4.5 Métodos de inserción y eliminación de StringBuilder 1316
+30.5 La clase Character 1317
+30.6 La clase StringTokenizer 1321
+30.7 Expresiones regulares, la clase Pattern y la clase Matcher 1322
+30.8 Conclusión 1330
+</pre></h2>
+               </div>
+                 </div>
+               <div data-role="footer" data-theme="a" data-position="fixed">
+                 <h4> Aplicación Tres, RMCM</h4>
+               </div>
+                </div>
+              
+              
+ <div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+             <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1>ASP.NET 4.0 </h1>
+             </div>
+             <div data-role="content" align="center">
+               <div>
+                  <div data-role="main" class="ui-content">
+                    <div data-role="collapsible" data-content-theme="false">
+          <h1>COMPRAR O DESCARGAR</h1>
+          <div>
+            <p><a href="https://www.casadellibro.com/libro-aspnet-40/9788441528123/1798954" target="_self">comprar</a></p>
+            <p><a href="http://thebookee.net/pr/programacion-en-java-thomas-wu">ver</a></p>
+            <br>
+          </div>
+          <div></div>
+          </div>
+       </div>
+
+
+
+  <div data-role="main" class="ui-content">
+    
+    <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','imagenes/1libro.png',1)"><img src="imagenes/libro1.png" width="199" height="264" id="Image11"></a></p>
+               <h2><pre>Contenido
+Parte I Fundamentos
+1 Conceptos básicos de la aplicación Web
+2 Fundamentos de la Aplicación ASP.NET.
+3 El modelo de renderizado de páginas
+4 Controles personalizados prestados. 
+5 Controles compuestos
+6 Potpourri de control
+Parte II Características avanzadas
+7 Un aspecto y una sensación consistentes8 Configuración
+9 Inicio de sesión
+10 Enlace de datos
+ 11 Navegación del sitio web
+12 Personalización
+13 Piezas web
+Parte III Almacenamiento en caché y administración del estado
+14 Estado de la sesión
+15 Caché de datos de la aplicación
+16 Salida de almacenamiento en caché
+Parte IV Diagnóstico y Plomería
+17 Diagnóstico y depuración
+18 La clase HttpApplication y los módulos HTTP
+19 Controladores HTTP
+Vi Resumen de los contenidos
+Parte V Datos dinámicos, XBAP, MVC, AJAX y Silverlight
+20 Datos dinámicos
+21 Contenido de ASP.NET y WPF
+22 El framework ASP.NET MVC
+23 AJAX
+24 Silverlight y ASP.NET
+Parte VI Servicios e implementación
+25 Windows Communication Foundation
+26 Despliegue
+</pre>
+
+         </div>
+
+<div data-role="main" class="ui-content"> </div>
+               </div>
+               </div>
+               
+             <div data-role="footer" data-theme="a" data-position="fixed">
+              <h4> Aplicación Tres, RMCM </h4>
+              </div>
+              </div>
+             
+             
+ <div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+             <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1> COMO PROGRAMAR JAVA  </h1>
+             </div>
+             <div data-role="content" align="center">
+               <div>
+                 
+                 <div data-role="main" class="ui-content">
+                      <div data-role="collapsible" data-content-theme="false">
+          <h1>COMPRAR O DESCARGAR</h1>
+          <div>
+            <p><a href="https://www.amazon.com/Java-Como-programar-ed-incluye/dp/9702611903" target="_self">comprar</a></p>
+            <a href="https://docs.google.com/file/d/0B1znxPN5ACgSbHhVU1RaVFh0cVU/edit" target="_self">ver</a><br>
+          </div>
+          <div></div>
+          </div>
+       </div>
+       
+                 <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('java','','imagenes/3libro.png',1)"><img src="imagenes/libro3.png" width="199" height="264" id="java"></a></p>
+                 <p>Java como  programar<br>
+                   Plantas de cable  y de cableado 35<br>
+                   Hardware de las estaciones de trabajo 36<br>
+                   Resumen del capitulo 37<br>
+                   4.- Cableado de las redes 39<br>
+                   Topologías del cableado 40<br>
+                   Topología bus 41<br>
+                   Topología estrella 43<br>
+                   Topología anillo<br>
+                   Comparación de la Topología anillo con las Topología estrella y bus 46<br>
+                   Desmitificación del cableado de las redes46<br>
+                   Tipos básicos de cable 49<br>
+                   Cableado por trenzado: el rey de los cables de red 50<br>
+                   Cable coaxial 54<br>
+                   Instalación y mantenimiento del cableado de la red 56<br>
+                   Selección del proveedor del cableado 57<br>
+                   Resolución de los problemas de cableado 58<br>
+                   Resumen del capítulo 60<br>
+                   5.- Conectividad de redes domésticas 61<br>
+                   Beneficios de la conectividad de redes domésticas 62<br>
+                   Selección de una tecnología para una red doméstica 63<br>
+                   Hardware estándar de red 63<br>
+                   Inalámbrica u otras opciones de conectividad de redes 64<br>
+                   Resumen del capítulo 65<br>
+                   6.- Comprensión del hardware de las redes 67<br>
+                   Dirigiendo el tráfico de la red 68<br>
+                   Repetidores 69<br>
+                   Hubs y concentradores 69<br>
+                   Switches 71<br>
+                   Puentes 74<br>
+                   Ruteadores 74<br>
+                   Compuertas 75<br>
+                   Protección de una red contra firewalls 76<br>
+                   Conexión de dispositivos RS-232 con métodos de corto alcance 77<br>
+                   Resumen del capítulo 78<br>
+                   7.- Conexiones entre WAN 79<br>
+                   Determinación de las necesidades de la WAN 80<br>
+                   Análisis de los requerimientos<br>
+                   ¿Conmutado o dedicado? 81<br>
+                   ¿Privado o público? 82<br>
+                   Tipos de conexión de la WAN 83<br>
+                   Servicio telefónico convencional (POST) 84<br>
+                   Red digital de servicios integrados (ISDN) 84<br>
+                   Línea digital de suscriptor (DSL) 86<br>
+                   Conexiones t-1/T-3 (DS1/DS3)<br>
+                   Modo de transferencia asincrónica (ATM) 88<br>
+                   X.25 89<br>
+                   Resumen del capitulo 89<br>
+                   8.- Protocolo de conectividad de redes 91<br>
+                   Comprensión de TCP y UDP 92<br>
+                   Puertos TCP y UDP 93<br>
+                   Paquetes IP y direccionamiento IP 94<br>
+                   Subredes IP<br>
+                   Mascaras de subred 98<br>
+                   Comprensión de otros protocolos de Internet 100<br>
+                   Sistema de nombres de dominio 101<br>
+                   Protocolo dinámico de configuración del Host (DJHCP) 102<br>
+                   Protocolo de transferencia de hipertexto (HTTTP)<br>
+                   Protocolo de transferencia de archivos (FTP) 103<br>
+                   Protocolo de transferencia Netnews (NNTP) 104<br>
+                   Telnet 105<br>
+                   Protocolo simple de trasferencia de correo (SMTP) 105<br>
+                   Voz sobre IP (VoIP) 105<br>
+                   Comparación de los protocolos propietarios importante 108&nbsp;<br>
+                   IPX/SPX de Novell 108<br>
+                   Protocolos NetBIOS y NetBEUI 109<br>
+                   Apple Talk 109<br>
+                   Resumen del capitulo 110<br>
+                   9.-Servicios de directorio 111<br>
+                   ¿Que es un servicio de directorio? 112<br>
+                   Bosques, árboles, raíces y hojas 114<br>
+                   Departamento del departamento de redundancia 115<br>
+                   Servicios específicos de directorio 116<br>
+                   EDirectory 117<br>
+                   Dominios Windows NT 117<br>
+                   Directorio activo 118<br>
+                   X.500 119<br>
+                   lDAP 119<br>
+                   Resumen del capitulo 121<br>
+                   10.-Conexiones a larga distancia: acceso remoto a redes 123<br>
+                   Clasificar a los usuarios remotos 124<br>
+                   Determinar las necesidades de acceso remoto 128<br>
+                   Aprender las tecnologías del acceso remoto<br>
+                   Nodo remoto en comparación con control remoto 130<br>
+                   Modem o no Modem, esa es la pregunta 132<br>
+                   Redes privadas virtuales 135<br>
+                   Resumen del capítulo 141<br>
+                   11.- Asegurando su red 143<br>
+                   Comprender la seguridad interna 145<br>
+                   Seguridad de las cuentas 146<br>
+                   Permisos de archivo y de directorio 149<br>
+                   Prácticas y educación del usuario 150<br>
+                   Comprender las amenazas externas 151<br>
+                   Amenazas en la puerta de 152<br>
+                   Amenazas en la puerta de atrás 154<br>
+                   Amenazas de negación del servicio 155<br>
+                   Virus y otro software malicioso 156<br>
+                   Resumen del capítulo 157<br>
+                   12.-Restablecimiento de los desastres de la red 159<br>
+                   Notas desde el lugar de los hechos: la ciudad de Seattle 160<br>
+                   Planes de restablecimiento en caso de desastre 164<br>
+                   Análisis de necesidades 164<br>
+                   Escenarios de desastres 165<br>
+                   Comunicación 167<br>
+                   Almacenamiento fuera del sitio<br>
+                   Componentes críticos de la reconstrucción 168<br>
+                   Respaldo y restablecimiento de la red<br>
+                   Evaluación de las necesidades 169<br>
+                   Adquisición de tecnologías y medios de respaldo 170<br>
+                   Selección de las estrategias de respaldo 172<br>
+                   Resumen del capitulo 176<br>
+                   13.- Servidores de red: todo lo que quería saber pero temía<br>
+                   Preguntar 177<br>
+                   Diferencias entre un servidor y una estación de trabajo 178<br>
+                   Procesadores de servidor 178<br>
+                   Capacidad de bus 181<br>
+                   RAM 182<br>
+                   Subsistemas del disco 183<br>
+                   Supervisión del estado del servidor 189<br>
+                   Componentes intercambiables 190<br>
+                   Selección de servidores par Windows y Netware 190<br>
+                   Definición de las necesidades 190<br>
+                   Selección del servidor 192<br>
+                   Compra del sistema 194<br>
+                   Instalación de los servidores 195<br>
+                   Mantenimiento y reparación de servidores 196<br>
+                   Resumen del capítulo 198<br>
+                   14.-Compra y administración de computadoras cliente 199<br>
+                   Selección de las computadoras de escritorio 200<br>
+                   Plataformas de escritorio 200<br>
+                   Confiabilidad y servicio 203<br>
+                   Precio y desempeño 205<br>
+                   Requerimientos de las estaciones de trabajo de la red 206<br>
+                   Hardware de las estaciones de trabajo de la red 206<br>
+                   Software de las estaciones de trabajo de la red 207<br>
+                   Resumen del capítulo 210<br>
+                   Parte II<br>
+                   Conocimiento por medio de la práctica<br>
+                   15.- Diseño de una red 213<br>
+                   Evaluación de las necesidades de la red 215<br>
+                   Aplicaciones 216<br>
+                   Usuarios 218<br>
+                   Servicios de red 219<br>
+                   Seguridad y protección 220<br>
+                   Planeación de la capacidad y el crecimiento 221<br>
+                   Satisfacción de las necesidades de la red<br>
+                   Selección del tipo de red 222<br>
+                   Selección de la estructura de la red 223<br>
+                   Selección de los servidores 224<br>
+                   Resumen del capitulo 225<br>
+                   16.-Instalación y configuración de Windows 2000 Server 227<br>
+                   Las versiones de Windows 2000 228<br>
+                   Preparación de la instalación 229<br>
+                   Verificación de la compatibilidad de hardware 230<br>
+                   Verificación de la configuración del hardware 230<br>
+                   Prueba del hardware del servidor 232<br>
+                   Reconocimiento del servidor antes de implantar una mejora en el sitio 233<br>
+                   Toma de decisiones en la etapa de la preinstalación 233<br>
+                   ¡Espere! ¡Respalde antes de actualizar! 236<br>
+                   Instalación del Windows 2000 Server 236<br>
+                   Ejecución del programa de instalación del Windows 2000 Server 236<br>
+                   Instalación del Windows 2000 Server 240<br>
+                   Fin de la Instalación del Windows 2000 Server 242<br>
+                   Configuración de un servidor cliente<br>
+                   Creación de una cuenta de usuario 246<br>
+                   Creación de un folder compartido 248<br>
+                   Configuración de un cliente Windows 9x para acceder a un servidor 249<br>
+                   Prueba de la conexión de cliente 251<br>
+                   Resumen del capítulo 252<br>
+                   17.-Administración de Windows 2000 Server: los fundamentos 253<br>
+                   Comentaros sobre la seguridad de las redes 254<br>
+                   Trabajo con cuentas de usuario 255<br>
+                   Adición de un usuario 256<br>
+                   Modificación de una cuenta de usuario 258<br>
+                   Eliminación o inhabilitación de una cuenta de usuario 263<br>
+                   Trabajos con grupos de seguridad Windows (2000) 263<br>
+                   Creación de grupos 264<br>
+                   Mantenimiento de lo miembros de los grupos 267<br>
+                   Trabajo con comparticiones 268<br>
+                   Comprensión de la seguridad de la compartición 268<br>
+                   Creación de comparticiones 270<br>
+                   Exploración de los controladores 272<br>
+                   Administración de los comparticiones de impresora 273<br>
+                   Configuración de una impresora de red 274<br>
+                   Trabajo con el respaldo de Windows 2000 278<br>
+                   Utilización del software de respaldo de Windows 2000 Server 281<br>
+                   Resumen del capitulo 285<br>
+                   18.-Otros servicios de Windows 2000 Server 287<br>
+                   Exploración del protocolo de configuración dinámica del anfitrión 288<br>
+                   (DHCP) 288<br>
+                   Investigación del sistema de nombre de dominio (DNS) 289<br>
+                   Comparación del servicio de acceso remoto (RAS) y el RRAS 291<br>
+                   Exploración del servidor de información de Internet (IIS) 293<br>
+                   Empleo de servicios de grupo 294<br>
+                   Servicio de terminal de Windows 294<br>
+                   Resumen del capítulo 296<br>
+                   19.- Windows Server 2003 297<br>
+                   Las nuevas características de Windows Server 2003 de Microsoft 298<br>
+                   Ediciones de Windows Server (2003) 298<br>
+                   Características nuevas y mejoradas en Windows Server (2003) 299<br>
+                   Ilustración de las características de Windows Server 2003<br>
+                   Tasas del servidor 302<br>
+                   Administración de la Web 303<br>
+                   Copias de sombra del volumen 304<br>
+                   1 Introducción a las computadoras, Internet y Web 1<br>
+                   1.1 Introducción 2<br>
+                   1.2 ¿Qué es una computadora? 4<br>
+                   1.3 Organización de una computadora 4<br>
+                   1.4 Los primeros sistemas operativos 5<br>
+                   1.5 Computación personal, distribuida y cliente/servidor 5<br>
+                   1.6 Internet y World Wide Web 6<br>
+                   1.7 Lenguajes máquina, ensambladores y de alto nivel 6<br>
+                   1.8 Historia de C y C++ 7<br>
+                   1.9 Historia de Java 8<br>
+                   1.10 Bibliotecas de clases de Java 8<br>
+                   1.11 FORTRAN, COBOL, Pascal y Ada 9<br>
+                   1.12 BASIC, Visual Basic, Visual C++, C# y .NET 10<br>
+                   1.13 Entorno de desarrollo típico en Java 10<br>
+                   1.14 Generalidades acerca de Java y este libro 13<br>
+                   1.15 Prueba de una aplicación en Java 14<br>
+                   1.16 Ejemplo práctico de Ingeniería de Software: introducción a la tecnología  de objetos y UML 19<br>
+                   1.17 Web 2.0 23<br>
+                   1.18 Tecnologías de software 24<br>
+                   1.19 Conclusión 24<br>
+                   1.20 Recursos Web 25<br>
+                   2 Introducción a las aplicaciones en Java 34<br>
+                   2.1 Introducción 35<br>
+                   2.2 Su primer programa en Java: imprimir una línea de texto 35<br>
+                   2.3 Modifi cación de nuestro primer programa en Java 41<br>
+                   2.4 Cómo mostrar texto con printf 43<br>
+                   2.5 Otra aplicación en Java: suma de enteros 44<br>
+                   2.6 Conceptos acerca de la memoria 48<br>
+                   2.7 Aritmética 49<br>
+                   2.8 Toma de decisiones: operadores de igualdad y relacionales 52<br>
+                   2.9 (Opcional) Ejemplo práctico de Ingeniería de Software: cómo examinar el  documento<br>
+                   de requerimientos de un problema 56<br>
+                   2.10 Conclusión 65<br>
+                   3 Introducción a las clases y los objetos 75<br>
+                   3.1 Introducción 76<br>
+                   3.2 Clases, objetos, métodos y variables de instancia 76<br>
+                   00_MAQ_PRELIMINARES.indd vii 4/30/08 12:24:31 AM<br>
+                   viii Contenido<br>
+                   3.3 Declaración de una clase con un método e instanciamiento de un objeto de una  clase 77<br>
+                   3.4 Declaración de un método con un parámetro 81<br>
+                   3.5 Variables de instancia, métodos establecer y métodos obtener 84<br>
+                   3.6 Comparación entre tipos primitivos y tipos por referencia 88<br>
+                   3.7 Inicialización de objetos mediante constructores 89<br>
+                   3.8 Números de punto fl otante y el tipo double 91<br>
+                   3.9 (Opcional) Ejemplo práctico de GUI y gráfi cos: uso de cuadros de diálogo  95<br>
+                   3.10 (Opcional) Ejemplo práctico de Ingeniería de Software: identifi cación de  las clases en un<br>
+                   documento de requerimientos 98<br>
+                   3.11 Conclusión 105<br>
+                   4 Instrucciones de control: parte 1 112<br>
+                   4.1 Introducción 113<br>
+                   4.2 Algoritmos 113<br>
+                   4.3 Seudocódigo 114<br>
+                   4.4 Estructuras de control 114<br>
+                   4.5 Instrucción de selección simple if 116<br>
+                   4.6 Instrucción de selección doble if...else 117<br>
+                   4.7 Instrucción de repetición while 121<br>
+                   4.8 Cómo formular algoritmos: repetición controlada por un contador 123<br>
+                   4.9 Cómo formular algoritmos: repetición controlada por un centinela 127<br>
+                   4.10 Cómo formular algoritmos: instrucciones de control anidadas 134<br>
+                   4.11 Operadores de asignación compuestos 138<br>
+                   4.12 Operadores de incremento y decremento 139<br>
+                   4.13 Tipos primitivos 142<br>
+                   4.14 (Opcional) Ejemplo práctico de GUI y gráfi cos: creación de dibujos  simples 142<br>
+                   4.15 (Opconal) Ejemplo práctico de Ingeniería de Software: identifi cación de  los atributos de las clases 146<br>
+                   4.16 Conclusión 150<br>
+                   5 Instrucciones de control: parte 2 164<br>
+                   5.1 Introducción 165<br>
+                   5.2 Fundamentos de la repetición controlada por contador 165<br>
+                   5.3 Instrucción de repetición for 167<br>
+                   5.4 Ejemplos sobre el uso de la instrucción for 171<br>
+                   5.5 Instrucción de repetición do...while 174<br>
+                   5.6 Instrucción de selección múltiple switch 176<br>
+                   5.7 Instrucciones break y continue 183<br>
+                   5.8 Operadores lógicos 185<br>
+                   5.9 Resumen sobre programación estructurada 190<br>
+                   5.10 (Opcional) Ejemplo práctico de GUI y gráfi cos: dibujo de rectángulos y  óvalos 194<br>
+                   5.11 (Opcional) Ejemplo práctico de Ingeniería de Software: cómo identifi car  los estados<br>
+                   y actividades de los objetos 197<br>
+                   5.12 Conclusión 200<br>
+                   6 Métodos: un análisis más detallado 211<br>
+                   6.1 Introducción 212<br>
+                   6.2 Módulos de programas en Java 212<br>
+                   6.3 Métodos static, campos static y la clase Math 214<br>
+                   6.4 Declaración de métodos con múltiples parámetros 216<br>
+                   6.5 Notas acerca de cómo declarar y utilizar los métodos 219<br>
+                   6.6 Pila de llamadas a los métodos y registros de activación 221<br>
+                   6.7 Promoción y conversión de argumentos 221<br>
+                   00_MAQ_PRELIMINARES.indd viii 4/30/08 12:24:32 AM<br>
+                   Contenido ix<br>
+                   6.8 Paquetes de la API de Java 222<br>
+                   6.9 Ejemplo práctico: generación de números aleatorios 224<br>
+                   6.9.1 Escalamiento y desplazamiento generalizados de números aleatorios 227<br>
+                   6.9.2 Repetitividad de números aleatorios para prueba y depuración 227<br>
+                   6.10 Ejemplo práctico: un juego de probabilidad (introducción a las  enumeraciones) 228<br>
+                   6.11 Alcance de las declaraciones 232<br>
+                   6.12 Sobrecarga de métodos 235<br>
+                   6.13 (Opcional) Ejemplo práctico de GUI y gráfi cos: colores y fi guras  rellenas 238<br>
+                   6.14 (Opcional) Ejemplo práctico de Ingeniería de Software: identifi cación de  las operaciones<br>
+                   de las clases 241<br>
+                   6.15 Conclusión 246<br>
+                   7 Arreglos 260<br>
+                   7.1 Introducción 261<br>
+                   7.2 Arreglos 261<br>
+                   7.3 Declaración y creación de arreglos 262<br>
+                   7.4 Ejemplos acerca del uso de los arreglos 264<br>
+                   7.5 Ejemplo práctico: simulación para barajar y repartir cartas 272<br>
+                   7.6 Instrucción for mejorada 274<br>
+                   7.7 Paso de arreglos a los métodos 276<br>
+                   7.8 Ejemplo práctico: la clase LibroCalificaciones que usa un arreglo para<br>
+                   almacenar las califi caciones 279<br>
+                   7.9 Arreglos multidimensionales 284<br>
+                   7.10 Ejemplo práctico: la clase LibroCalificaciones que usa un arreglo  bidimensional 288<br>
+                   7.11 Listas de argumentos de longitud variable 293<br>
+                   7.12 Uso de argumentos de línea de comandos 294<br>
+                   7.13 (Opcional) Ejemplo práctico de GUI y gráfi cos: cómo dibujar arcos 296<br>
+                   7.14 (Opcional) Ejemplo práctico de Ingeniería de Software: colaboración entre  los objetos 299<br>
+                   7.15 Conclusión 305<br>
+                   8 Clases y objetos: un análisis más detallado 325<br>
+                   8.1 Introducción 326<br>
+                   8.2 Ejemplo práctico de la clase Tiempo 327<br>
+                   8.3 Control del acceso a los miembros 330<br>
+                   8.4 Referencias a los miembros del objeto actual mediante this 331<br>
+                   8.5 Ejemplo práctico de la clase Tiempo: constructores sobrecargados 333<br>
+                   8.6 Constructores predeterminados y sin argumentos 338<br>
+                   8.7 Observaciones acerca de los métodos Establecer y Obtener 338<br>
+                   8.8 Composición 340<br>
+                   8.9 Enumeraciones 342<br>
+                   8.10 Recolección de basura y el método finalize 345<br>
+                   8.11 Miembros de clase static 345<br>
+                   8.12 Declaración static import 350<br>
+                   8.13 Variables de instancia final 351<br>
+                   8.14 Reutilización de software 353<br>
+                   8.15 Abstracción de datos y encapsulamiento 354<br>
+                   8.16 Ejemplo práctico de la clase Tiempo: creación de paquetes 355<br>
+                   8.17 Acceso a paquetes 360<br>
+                   8.18 (Opcional) Ejemplo práctico de GUI y gráfi cos: uso de objetos con gráfi  cos 361<br>
+                   8.19 (Opcional) Ejemplo práctico de Ingeniería de Software: inicio de la  programación de las clases<br>
+                   del sistema ATM 364<br>
+                   8.20 Conclusión 369<br>
+                   00_MAQ_PRELIMINARES.indd ix 4/30/08 12:24:32 AM<br>
+                   x Contenido<br>
+                   9 Programación orientada a objetos: herencia 378<br>
+                   9.1 Introducción 379<br>
+                   9.2 Superclases y subclases 380<br>
+                   9.3 Miembros protected 382<br>
+                   9.4 Relación entre las superclases y las subclases 382<br>
+                   9.4.1 Creación y uso de una clase EmpleadoPorComision 383<br>
+                   9.4.2 Creación de una clase EmpleadoBaseMasComision sin usar la herencia 387<br>
+                   9.4.3 Creación de una jerarquía e herencia EmpleadoPorComision-<br>
+                   EmpleadoBaseMasComision 391<br>
+                   9.4.4 La jerarquía de herencia EmpleadoPorComision-EmpleadoBaseMasComision<br>
+                   mediante el uso de variables de instancia protected 394<br>
+                   9.4.5 La jerarquía de herencia EmpleadoPorComision-EmpleadoBaseMasComision<br>
+                   mediante el uso de variables de instancia private 399<br>
+                   9.5 Los constructores en las subclases 404<br>
+                   9.6 Ingeniería de software mediante la herencia 409<br>
+                   9.7 La clase object 410<br>
+                   9.8 (Opcional) Ejemplo práctico de GUI y gráfi cos: mostar texto e imágenes  usando etiquetas 411<br>
+                   9.9 Conclusión 413<br>
+                   10 Programación orientada a objetos: polimorfi smo 417<br>
+                   10.1 Introducción 418<br>
+                   10.2 Ejemplos del polimorfi smo 419<br>
+                   10.3 Demostración del comportamiento polimórfi co 420<br>
+                   10.4 Clases y métodos abstractos 423<br>
+                   10.5 Ejemplo práctico: sistema de nómina utilizando polimorfi smo 425<br>
+                   10.5.1 Creación de la superclase abstracta Empleado 426<br>
+                   10.5.2 Creación de la subclase concreta EmpleadoAsalariado 426<br>
+                   10.5.3 Creación de la subclase concreta EmpleadoPorHoras 429<br>
+                   10.5.4 Creación de la subclase concreta EmpleadoPorComision 431<br>
+                   10.5.5 Creación de la subclase concreta indirecta EmpleadoBaseMasComision 432<br>
+                   10.5.6 Demostración del procesamiento polimórfi co, el operador instanceof y<br>
+                   la conversión descendente 433<br>
+                   105.7 Resumen de las asignaciones permitidas entre variables de la superclase y  de la subclase 437<br>
+                   10.6 Métodos y clases final 438<br>
+                   10.7 Ejemplo práctico: creación y uso de interfaces 439<br>
+                   10.7.1 Desarrollo de una jerarquía PorPagar 440<br>
+                   10.7.2 Declaración de la interfaz PorPagar 441<br>
+                   10.7.3 Creación de la clase Factura 441<br>
+                   10.7.4 Modifi cación de la clase Empleado para implementar la interfaz PorPagar  443<br>
+                   10.7.5 Modifi cación de la clase EmpleadoAsalariado para usarla en la jerarquía  PorPagar 445<br>
+                   10.7.6 Uso de la interfaz PorPagar para procesar objetos Factura y Empleado<br>
+                   mediante el polimorfi smo 446<br>
+                   10.7.7 Declaración de constantes con interfaces 448<br>
+                   10.7.8 Interfaces comunes de la API de Java 448<br>
+                   10.8 (Opcional) Ejemplo práctico de GUI y gráfi cos: realizar dibujos mediante  el polimorfi smo 449<br>
+                   10.9 (Opcional) Ejemplo práctico de Ingeniería de Software: incorporación de la  herencia en<br>
+                   el sistema ATM 451<br>
+                   10.10 Conclusión 457<br>
+                   00_MAQ_PRELIMINARES.indd x 4/30/08 12:24:33 AM<br>
+                   Contenido xi<br>
+                   11 Componentes de la GUI: parte 1 462<br>
+                   11.1 Introducción 463<br>
+                   11.2 Entrada/salida simple basada en GUI con JOptionPane 464<br>
+                   11.3 Generalidades de los componentes de Swing 467<br>
+                   11.4 Mostrar texto e imágenes en una ventana 469<br>
+                   11.5 Campos de texto y una introducción al manejo de eventos con clases  anidadas 474<br>
+                   11.6 Tipos de eventos comunes de la GUI e interfaces de escucha 479<br>
+                   11.7 Cómo funciona el manejo de eventos 481<br>
+                   11.8 JButton 483<br>
+                   11.9 Botones que mantienen el estado 486<br>
+                   11.9.1 JCheckBox 486<br>
+                   11.9.2 JRadioButton 489<br>
+                   11.10 JComboBox y el uso de una clase interna anónima para el manejo de eventos  492<br>
+                   11.11 JList 495<br>
+                   11.12 Listas de selección múltiple 497<br>
+                   11.13 Manejo de eventos de ratón 500<br>
+                   11.14 Clases adaptadoras 504<br>
+                   11.15 Subclase de JPanel para dibujar con el ratón 507<br>
+                   11.16 Manejo de eventos de teclas 510<br>
+                   11.17 Administradores de esquemas 513<br>
+                   11.17.1 FlowLayout 514<br>
+                   11.17.2 BorderLayout 517<br>
+                   11.17.3 GridLayout 520<br>
+                   11.18 Uso de paneles para administrar esquemas más complejos 522<br>
+                   11.19 JTextArea 523<br>
+                   11.20 Conclusión 526<br>
+                   12 Gráfi cos y Java 2DTM 539<br>
+                   12.1 Introducción 540<br>
+                   12.2 Contextos y objetos de gráfi cos 542<br>
+                   12.3 Control de colores 542<br>
+                   12.4 Control de tipos de letra 548<br>
+                   12.5 Dibujo de líneas, rectángulos y óvalos 554<br>
+                   12.6 Dibujo de arcos 558<br>
+                   12.7 Dibujo de polígonos y polilíneas 560<br>
+                   12.8 La API Java 2D 563<br>
+                   12.9 Conclusión 569<br>
+                   13 Manejo de excepciones 578<br>
+                   13.1 Introducción 579<br>
+                   13.2 Generalidades acerca del manejo de excepciones 580<br>
+                   13.3 Ejemplo: división entre cero sin manejo de excepciones 580<br>
+                   13.4 Ejemplo: manejo de excepciones tipo ArithmeticException e  InputMismatchException 582<br>
+                   13.5 Cuándo utilizar el manejo de excepciones 587<br>
+                   13.6 Jerarquía de excepciones en Java 587<br>
+                   13.7 Bloque finally 590<br>
+                   13.8 Limpieza de la pila 594<br>
+                   13.9 printStackTrace, getStackTrace y getMessage 595<br>
+                   13.10 Excepciones encadenadas 597<br>
+                   13.11 Declaración de nuevos tipos de excepciones 599<br>
+                   13.12 Precondiciones y poscondiciones 600<br>
+                   00_MAQ_PRELIMINARES.indd xi 4/30/08 12:24:33 AM<br>
+                   xii Contenido<br>
+                   13.13 Aserciones 601<br>
+                   13.14 Conclusión 602<br>
+                   14 Archivos y fl ujos 608<br>
+                   14.1 Introducción 609<br>
+                   14.2 Jerarquía de datos 610<br>
+                   14.3 Archivos y fl ujos 611<br>
+                   14.4 La clase File 613<br>
+                   14.5 Archivos de texto de acceso secuencial 617<br>
+                   14.5.1 Creación de un archivo de texto de acceso secuencial 617<br>
+                   14.5.2 Cómo leer datos de un archivo de texto de acceso secuencial 623<br>
+                   14.5.3 Ejemplo práctico: un programa de solicitud de crédito 625<br>
+                   14.5.4 Actualización de archivos de acceso secuencial 630<br>
+                   14.6 Serialización de objetos 630<br>
+                   14.6.1 Creació de un archivo de acceso secuencial mediante el uso de la  serialización<br>
+                   de objetos 631<br>
+                   14.6.2 Lectura y deserialización de datos de un archivo de acceso secuencial  636<br>
+                   14.7 Clases adicionales de java.io 638<br>
+                   14.8 Abrir archivos con JFileChooser 640<br>
+                   14.9 Conclusión 643<br>
+                   15 Recursividad 653<br>
+                   15.1 Introducción 654<br>
+                   15.2 Conceptos de recursividad 655<br>
+                   15.3 Ejemplo de uso de recursividad: factoriales 655<br>
+                   15.4 Ejemplo de uso de recursividad: serie de Fibonacci 658<br>
+                   15.5 La recursividad y la pila de llamadas a métodos 661<br>
+                   15.6 Comparación entre recursividad e iteración 662<br>
+                   15.7 Las torres de Hanoi 664<br>
+                   15.8 Fractales 666<br>
+                   15.9 &ldquo;Vuelta atrás&rdquo; recursiva (backtracking) 676<br>
+                   15.10 Conclusión 676<br>
+                   15.11 Recursos en Internet y Web 676<br>
+                   16 Búsqueda y ordenamiento 685<br>
+                   16.1 Introducción 686<br>
+                   16.2 Algoritmos de búsqueda 687<br>
+                   16.2.1 Búsqueda lineal 687<br>
+                   16.2.2 Búsqueda binaria 690<br>
+                   16.3 Algoritmos de ordenamiento 695<br>
+                   16.3.1 Ordenamiento por selección 695<br>
+                   16.3.2 Ordenamiento por inserción 699<br>
+                   16.3.3 Ordenamiento por combinación 702<br>
+                   16.4 Invariantes 708<br>
+                   16.5 Conclusión 709<br>
+                   17 Estructuras de datos 714<br>
+                   17.1 Introducción 715<br>
+                   17.2 Clases de envoltura de tipos para los tipos primitivos 716<br>
+                   17.3 Autoboxing y autounboxing 716<br>
+                   00_MAQ_PRELIMINARES.indd xii 4/30/08 12:24:34 AM<br>
+                   Contenido xiii<br>
+                   17.4 Clases autorreferenciadas 717<br>
+                   17.5 Asignación dinámica de memoria 717<br>
+                   17.6 Listas enlazadas 718<br>
+                   17.7 Pilas 72<br>
+                   17.8 Colas 730<br>
+                   17.9 Árboles 733<br>
+                   17.10 Conclusión 739<br>
+                   18 Genéricos 761<br>
+                   18.1 Introducción 762<br>
+                   18.2 Motivación para los métodos genéricos 762<br>
+                   18.3 Métodos genéricos: implementación y traducción en tiempo de compilación  764<br>
+                   18.4 Cuestiones adicionales sobre la traducción en tiempo de compilación:  métodos que utilizan<br>
+                   un parámetro de tipo como tipo de valor de retorno 767<br>
+                   18.5 Sobrecarga de métodos genéricos 770<br>
+                   18.6 Clases genéricas 770<br>
+                   18.7 Tipos crudos (raw) 77<br>
+                   18.8 Comodines en métodos que aceptan parámetros de tipo 783<br>
+                   18.9 Genéricos y herencia: observaciones 787<br>
+                   18.10 Conclusión 787<br>
+                   18.11 Recursos en Internet y Web 787<br>
+                   19 Colecciones 79<br>
+                   19.1 Introducción 793<br>
+                   19.2 Generalidades acerca de las colecciones 794<br>
+                   19.3 La clase Arrays 79<br>
+                   19.4 La interfaz Collection y la clase Collections 797<br>
+                   19.5 Listas 798<br>
+                   19.5.1 ArrayList e Iterator 799<br>
+                   19.5.2 LinkedList800<br>
+                   19.5.3 Vector 805<br>
+                   19.6 Algoritmos de las colecciones 808<br>
+                   19.6.1 El algoritmo sort 809<br>
+                   19.6.2 El algoritmo shuffle 812<br>
+                   19.6.3 Los algoritmos reverse, fill, cpy, max y min 815<br>
+                   19.6.4 El algoritmo binarySearch 816<br>
+                   19.6.5 Los algoritmos addAll, frequency y disjoint 818<br>
+                   19.7 La clase Stack del paquete java.util 820<br>
+                   19.8 La clase PriorityQueue y la interfaz Queue 822<br>
+                   19.9 Conjuntos 23<br>
+                   19.10 Mapas 826<br>
+                   19.11 La clase Properties 829<br>
+                   19.12 Colecciones sincronizadas 832<br>
+                   19.13 Colecciones no modificar cables 833<br>
+                   19.14 Implementaciones abstractas 834<br>
+                   19.15 Conclusión 83<br>
+                   20 Introducción a los applets de Java 841<br>
+                   20.1 Introducción 842<br>
+                   20.2 Applets de muestra incluidos en el JDK 842<br>
+                   20.3 Applet simple en Java: cómo dibujar una cadena 846<br>
+                   00_MAQ_PRELIMINARES.indd xiii 4/30/08 12:24:34 AM<br>
+                   xiv Contenido<br>
+                   20.3.1 Cómo ejecutar un applet en el appletviewer 848<br>
+                   20.3.2 Ejecución de un applet en un explorador Web 850<br>
+                   20.4 Métodos del ciclo de vida de los applets 850<br>
+                   20.5 Cómo inicializar una variable de instancia con el método int 851<br>
+                   20.6 Modelo de seguridad &ldquo;caja de arena&rdquo; 853<br>
+                   20.7 Recursos en Internet y Web 853<br>
+                   20.8 Conclusión 854<br>
+                   21 Multimedia: applets y aplicaciones 858<br>
+                   21.1 Introducción 859<br>
+                   21.2 Cómo cargar, mostrar y escalar imágenes 860<br>
+                   21.3 Animación de una serie de imágenes 862<br>
+                   21.4 Mapas de imágenes 867<br>
+                   21.5 Carga y reproducción de clips de audio 869<br>
+                   21.6 Reproducción de video y otros medios con el Marco de trabajo de medios de  Java 872<br>
+                   21.7 Conclusión 876<br>
+                   21.8 Recursos Web 876<br>
+                   22 Componentes de la GUI: parte 2 883<br>
+                   22.1 Introduccón 884<br>
+                   22.2 JSlider 884<br>
+                   22.3 Ventanas: observaciones adicionales 888<br>
+                   22.4 Uso de menús con marcos 889<br>
+                   22.5 JPopupMenu 896<br>
+                   22.6 Apariencia visual adaptable 899<br>
+                   22.7 JDesktopPane y JInternalFrame 903<br>
+                   22.8 JTabbedPane 906<br>
+                   22.9 Administradores de esquemas: BoxLayout y GridBagLayout 908<br>
+                   22.10 Conclusión 920<br>
+                   23 Subprocesamiento múltiple 925<br>
+                   23.1 Introducción 926<br>
+                   23.2 Estados de los subprocesos: ciclo de vida de un subproceso 927<br>
+                   23.3 Prioridades y programación de subprocesos 929<br>
+                   23.4 Creación y ejecución de subprocesos 931<br>
+                   23.4.1 Objetos Runnable y la clase Thread 931<br>
+                   23.4.2 Administración de subprocesos con el marco de trabajo Executor 934<br>
+                   23.5 Sincronización de subprocesos 935<br>
+                   23.5.1 Cómo compartir datos sin sincronización 936<br>
+                   23.5.2 Cómo compartir datos con sincronización: hacer las operaciones atómicas  940<br>
+                   23.6 Relación productor/consumidor sin sincronización 943<br>
+                   23.7 Relación productor/consumidor: ArrayBlockingQueue 949<br>
+                   23.8 Relación productor/consumidor con sincronización 952<br>
+                   23.9 Relación productor/consumidor: búferes delimitados 957<br>
+                   23.10 Relación productor/consumidor: las interfaces Lock y Condition 964<br>
+                   23.11 Subprocesamiento múltiple con GUIs 970<br>
+                   23.11.1 Realización de cálculos en un subproceso trabajador 970<br>
+                   23.11.2 Procesamiento de resultados inmediatos con SwingWorker 976<br>
+                   23.12 Otras clases e interfaces en java.util.concurrent 982<br>
+                   23.13 Conclusión 983<br>
+                   00_MAQ_PRELIMINARES.indd xiv 4/30/08 12:24:34 AM<br>
+                   Contenido xv<br>
+                   24 Redes 992<br>
+                   24.1 Introducción 993<br>
+                   24.2 Manipulación de URLs 994<br>
+                   24.3 Cómo leer un archivo en un servidor Web 998<br>
+                   24.4 Cómo establecer un servidor simple utilizando sockets de fl ujo 1001<br>
+                   24.5 Cómo establecer un cliente simple utilizando sockets de fl ujo 1003<br>
+                   24.6 Interacción entre cliente/servidor mediante conexiones de socket de fl ujo  1004<br>
+                   24.7 Interacción entre cliente/servidor sin conexión mediante datagramas 1014<br>
+                   24.8 Juego de Tres en raya (Gato) tipo cliente/servidor, utilizando un servidor  con<br>
+                   subprocesamiento múltiple 1021<br>
+                   24.9 La seguridad y la red 1034<br>
+                   24.10 [Bono Web] Ejemplo práctico: servidor y cliente DeitelMessenger 1034<br>
+                   24.11 Conclusión 1035<br>
+                   25 Acceso a bases de datos con JDBC 1041<br>
+                   25.1 Introducción 1042<br>
+                   25.2 Bases de datos relacionales 1043<br>
+                   25.3 Generalidades acerca de las bases de datos relacionales: la base de datos  libros 1044<br>
+                   25.4 SQL 1047<br>
+                   25.4.1 Consulta básica SELECT 1047<br>
+                   25.4.2 La cláusula WHERE 1048<br>
+                   25.4.3 La cláusula ORDER BY 1050<br>
+                   25.4.4 Cómo fusionar datos de varias tablas: INNER JOIN 1051<br>
+                   25.4.5 La instrucción INSERT 1053<br>
+                   25.4.6 La instrucción UPDATE 1053<br>
+                   25.4.7 La instrucción DELETE 1054<br>
+                   25.5 Instrucciones para instalar MySQL y MySQL Connector/J 1055<br>
+                   25.6 Instrucciones para establecer una cuenta de usuario de MySQL 1056<br>
+                   25.7 Creación de la base de datos libros en MySQL 1057<br>
+                   25.8 Manipulación de bases de datos con JDBC 1057<br>
+                   25.8.1 Cómo conectarse y realizar consultas en una base de datos 1057<br>
+                   25.8.2 Consultas en la base de datos libros 1062<br>
+                   25.9 La interfaz RowSet 1073<br>
+                   25.10 Java DB/Apache Derby 1075<br>
+                   25.11 Objetos PreparedStatement 1076<br>
+                   25.12 Procedimientos almacenados 1090<br>
+                   25.13 Procesamiento de transacciones 1091<br>
+                   25.14 Conclusión 1091<br>
+                   25.15 Recursos Web y lecturas recomendadas 1092<br>
+                   Los capítulos 26 a 30 así como los apéndices, los encontrará en el CD que  acompaña este libro.<br>
+                   26 Aplicaciones Web: arte 1 1101<br>
+                   26.1 Introducción 1102<br>
+                   26.2 Transacciones HTTP simples 1103<br>
+                   26.3 Arquitectura de aplicaciones multinivel 1105<br>
+                   26.4 Tecnologías Web de Java 1106<br>
+                   26.4.1 Servlets 1106<br>
+                   26.4.2 JavaServer Pages 1106<br>
+                   26.4.3 JavaServer Faces 1107<br>
+                   26.4.4 Tecnologías Web en Java Studio Creator 2 1108<br>
+                   00_MAQ_PRELIMINARES.indd xv 4/30/08 12:24:35 AM<br>
+                   xvi Contenido<br>
+                   26.5 Creación y ejecución de una aplicación simple en Java Studio Creator 2  1108<br>
+                   26.5.1 Análisis de un archivo JSP 110<br>
+                   26.5.2 Análisis de un archivo de bean de página 1111<br>
+                   26.5.3 Ciclo de vida del procesamiento de eventos 1115<br>
+                   26.5.4 Relación entre la JSP y los archivos de bean de página 1115<br>
+                   26.5.5 Análisis del XHTML generado por una aplicación Web de Java 1115<br>
+                   26.5.6 Creación de una aplicación Web en Java Studio Creator 2 1117<br>
+                   26.6 Componentes JSF 1123<br>
+                   26.6.1 Componentes de texto y gráfi cos 1123<br>
+                   26.6.2 Validación mediante los componentes de validación y los validadores  personalizados 1128<br>
+                   26.7 Rastreo de sesiones 1137<br>
+                   26.7.1 Cookies 1138<br>
+                   26.7.2 Rastreo de sesiones con el objeto SessionBean 1150<br>
+                   26.8 Conclusión 1162<br>
+                   26.9 Recursos Web 1163<br>
+                   27 Aplicaciones Web: parte 2 1173<br>
+                   27.1 Introducción 1174<br>
+                   27.2 Acceso a bases de datos en las aplicaciones Web 1174<br>
+                   27.2.1 Creación de una aplicación Web que muestra datos de una base de datos  1175<br>
+                   27.2.2 Modifi cación del archivo de bean de página para la aplicación  LibretaDirecciones 1183<br>
+                   27.3 Componentes JSF habilitados para Ajax 1185<br>
+                   27.3.1 Biblioteca de componentes Java BluePrints 1186<br>
+                   27.4 Autocomplete Text Field y formularios virtuales 1187<br>
+                   27.4.1 Confi guración de los formularios virtuales 11<br>
+                   27.4.2 Archivo JSP con formularios virtuales y un AutoComplete Text Field 1189<br>
+                   27.4.3 Cómo proporcionar sugerencias para un AutoComplete Text Field 1192<br>
+                   27.5 Componente Map Viewer de Google Maps 1196<br>
+                   27.5.1 Cómo obtener una clave de la API Google Maps 1196<br>
+                   27.5.2 Cómo agregar un componente y un Map Viewer a una página 1196<br>
+                   27.5.3 Archivo JSP con un componente Map Viewer 1197<br>
+                   27.5.4 Bean de página que muestra un mapa en el componente Map Viewer 1201<br>
+                   27.6 Conclusión 1206<br>
+                   27.7 Recursos Web 1206<br>
+                   28 Servicios Web JAX-WS, Web 2.0 y Mash-ups 1212<br>
+                   28.1 Introducción 1213<br>
+                   28.1.1 Descarga, instalación y confi guración de Netbeans 5.5 y Sun Java System<br>
+                   Application Server 1214<br>
+                   28.1.2 Centro de recursos de servicios Web y Centros de recursos sobre Java<br>
+                   en www.deitel.com 1215<br>
+                   28.2 Fundamentos de los servicios Web de Java 1215<br>
+                   28.3 Creación, publicación, prueba y descripción de un servicio Web 1216<br>
+                   28.3.1 Creación de un proyecto de aplicación Web y cómo agregar una clase de  servicio<br>
+                   Web en Netbeans 1216<br>
+                   28.3.2 Defi nición del servicio Web EnteroEnorme en Netbeans 1217<br>
+                   28.3.3 Publicación del servicio Web EnteroEnorme desde Netbeans 1221<br>
+                   28.3.4 Prueba del servicio Web EnteroEnorme con la página Web Tester de<br>
+                   Sun Java System Application Server 1222<br>
+                   28.3.5 Descripción de un servicio Web con el Lenguaje de descripción de  servicios<br>
+                   Web (WSDL) 1224<br>
+                   00_MAQ_PRELIMINARES.indd xvi 4/30/08 12:24:35 AM<br>
+                   Contenido xvii<br>
+                   28.4 Cómo consumir un servicio Web 1224<br>
+                   28.4.1 Creación de un cliente para consumir el servicio Web EnteroEnorme 1225<br>
+                   28.4.2 Cómo consumir el servicio Web EnteroEnorme 1227<br>
+                   28.5 SOAP 1234<br>
+                   28.6 Rastreo de sesiones en los servicios Web 1234<br>
+                   28.6.1 Creación de un servicio Web Blackjack 1235<br>
+                   28.6.2 Cómo consumir el servicio Web Blackjack 1239<br>
+                   28.7Cómo consumir un servicio Web controlado por base de datos desde una  aplicación Web 1249<br>
+                   28.7.1 Confi guración de Java DB en Netbeans y creación de la base de datos  Reservacion 1249<br>
+                   28.7.2 Creación de una aplicación Web para interactuar con el servicio Web  Reservacion 1253<br>
+                   28.8 Cómo pasar un objeto de un tipo defi nido por el usuario a un servicio Web  1258<br>
+                   28.9 Conclusión 1266<br>
+                   28.10 Recursos Web 1267<br>
+                   29 Salida con formato 1275<br>
+                   29.1 Introducción 1276<br>
+                   29.2 Flujos 127<br>
+                   29.3 Aplicación de formato a la salida con printf 1276<br>
+                   29.4 Impresión de enteros 1277<br>
+                   29.5 Impresión de números de punto fl otante 1278<br>
+                   29.6 Impresión de cadenas y caracteres 1279<br>
+                   29.7 Impresión de fechas y horas 1280<br>
+                   29.8 Otros caracteres de conversión 1283<br>
+                   29.9 Impresión con anchuras de campo y precisiones 1284<br>
+                   29.10 Uso de banderas en la cadena de formato de printf 1285<br>
+                   29.11 Impresión con índices como argumentos 1289<br>
+                   29.12 Impresión de literales y secuencias de escape 1290<br>
+                   29.13 Aplicación de formato a la salida con la clase Formatter 1290<br>
+                   29.14 Conclusión 1291<br>
+                   30 Cadenas, caracteres y expresiones regulares 1297<br>
+                   30.1 Introducción 1298<br>
+                   30.2 Fundamentos de los caracteres y las cadenas 1298<br>
+                   30.3 La clase String 1299<br>
+                   30.3.1 Constructores de String 1299<br>
+                   30.3.2 Métodos length, charAt y getChars de String 1300<br>
+                   30.3.3 Comparación entre cadenas 1301<br>
+                   30.3.4 Localización de caracteres y subcadenas en las cadenas 1305<br>
+                   30.3.5 Extracción de subcadenas de las cadenas 1307<br>
+                   30.3.6 Concatenación de cadenas 1308<br>
+                   30.3.7 Métodos varios de String 1308<br>
+                   30.3.8 Método valueOf de String 1309<br>
+                   30.4 La clase StringBuilder 1311<br>
+                   30.4.1 Constructores de StringBuilder 1311<br>
+                   30.4.2 Métodos length, capacity, setLength y ensureCapacity de StringBuilder  1312<br>
+                   30.4.3 Métodos charAt, setCharAt, getChars y reverse de StringBuilder 1313<br>
+                   30.4.4 Métodos append de StringBuilder 1314<br>
+                   30.4.5 Métodos de inserción y eliminación de StringBuilder 1316<br>
+                   30.5 La clase Character 1317<br>
+                   30.6 La clase StringTokenizer 1321<br>
+                   30.7 Expresiones regulares, la clase Pattern y la clase Matcher 1322<br>
+                 30.8 Conclusión 1330</p>
+<p>&nbsp;</p>
+                
+               </div>
+              </div> 
+            <div data-role="footer" data-theme="a" data-position="fixed">
+              <h4> Aplicación Tres, RMCM</h4>
+             </div>
+             </div>
+             
+ <div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+             <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1> MANTENIMIENTO Y REPARACION DE COMPUTADORAS </h1>
+             </div>
+             <div data-role="content" align="center">
+               <div>
+                  <div data-role="main" class="ui-content">
+       <div data-role="collapsible" data-content-theme="false">
+          <h1>COMPRAR O DESCARGAR</h1>
+          <div>
+            <p><a href="http://articulo.mercadolibre.com.mx/MLM-552398943-libro-mantenimiento-y-reparacion-de-computadoras-_JM" target="_self">comprar</a></p>
+            <p><a href="http://www.grupocultural.com/catalogo-grupo-cultural-detalle.php?id=91&id_categoria=14" target="_self">ver</a></p>
+            <br>
+          </div>
+          <div></div>
+          </div>
+         </div> 
+            <pre>
+    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ABCD','','imagenes/5libro.png',1)"><img src="imagenes/libro5.png" name="ABCD" width="199" height="264" id="ABCD"></a>
+Mantenimiento de computadoras
+Introducción
+Mantenimiento preventivo
+Mantenimiento correctivo
+Dispositivos internos del gabinete o carcasa (CPU)
+Tarjeta madre o principal
+Microprocesador
+Memoria RAM
+Disco duro o rígido
+Tarjeta de vídeo
+Tarjeta de sonido
+Tarjeta de red
+Fax-módem
+Puertos de conexión
+Fuente de poder
+Pasos para el desarmado del gabinete (CPU)
+Pasos para el armado del gabinete (CPU)
+El BIOS
+Instalación del sistema operativo Windows XP
+Herramientas de diagnóstico 
+Desfragmentador de disco 
+Liberador de espacio en disco
+Introducción a redes
+¿Qué es una red?
+Componentes principales de una red
+Estaciones de trabajo
+Servidores
+Medios de transmisión 
+dispositivos de conexión
+Cobertura de una red
+Redes de área local (LAN)
+Redes de áreas extensas (WAN) 
+Topología de una red
+Topología en bus o lineal 
+Topología en anillo 
+Topología en estrella 
+Elaboración de un cable UTP para red
+Equipo y material necesario
+Normas de cableado
+Tipos de cable que se pueden elaborar
+Pasos generales para elaborar un cable UTP para red
+Creación de un grupo de trabajo
+Requisitos para formar un grupo de trabajo
+Pasos para crear un grupo de trabajo
+Compartir recursos
+Compartir archivos y carpetas
+</pre>
+               </div>
+              </div> 
+       <div data-role="footer" data-theme="a" data-position="fixed">
+                <h4> Aplicación Tres, RMCM </h4>
+              </div>
+             </div>
+            
+             
+ <div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+             <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1> ESTRUCTURA DE DATOS </h1>
+             </div>
+             <div data-role="content" align="center">
+               <div>
+                  <div data-role="main" class="ui-content">
+       <div data-role="collapsible" data-content-theme="false">
+          <h1>COMPRAR O DESCARGAR</h1>
+          <div>
+            <p><a href="e-datos/9789701059081/1099527" target="_self">comprar</a></p>
+            <p><a href="https://docs.google.com/file/d/0B_XimPSyUDLcM2ZtU3VCVHhLUUk/view" target="_self">ver</a></p>
+            <br>
+          </div>
+          <div></div>
+          </div>
+         </div> 
+                 <p>CAPÍTULO 1.  Estructuras fundamentales de datos 1<br>
+                    1.1 Introducción 1<br>
+                    1.2 Arreglos 2<br>
+                    1.2.1 Declaración de arreglos unidimensionales 5<br>
+                    1.2.2 Operaciones con arreglos unidimensionales 7<br>
+                    1.3 Arreglos bidimensionales 18<br>
+                    1.3.1 Declaración de arreglos bidimensionales 19<br>
+                    1.3.2 Operaciones con arreglos bidimensionales 23<br>
+                    lA Arreglos de más de dos dimensiones 25<br>
+                    1.5 La clase Arreglo 27<br>
+                    1 6 Registros 29<br>
+                    1.6.1 Declaración de registros 29<br>
+                    1.6.2 Acceso a los campos de un registro 30<br>
+                    1.6.3 Diferencias entre registros y arreglos 32<br>
+                    1.6.4 Combinaciones entre arreglos y registros 32<br>
+                    1.6.5 Arreglos paralelos 36<br>
+                    1.7 Registros y clases 39<br>
+                    Ejercicios 40<br>
+  <br>
+                    CAPÍTULO 2. Arreglos multidimensionales representados en arreglos<br>
+                    unidimensionales 51<br>
+                    2.1 Introducción 51<br>
+                    2.2 Arreglos bidimensionales 51<br>
+                    2.3 Arreglos de más de dos dimensiones 54<br>
+                    2.4 Matrices poco densas 59<br>
+                    2.4.1 Matrices cuadradas poco densas 61<br>
+                    2.4.2 Matriz triangular inferior 61<br>
+                    2.4.3 Matriz triangular superior 63&lt; 2.4.4 Matriz tridiagonal 65<br>
+                    2.4.5 Matrices simétricas y antisimétricas 67<br>
+                    Ejercicios 69<br>
+  <br>
+                    Capitulo 3. Pilas y colas 75<br>
+  <br>
+                    3.1 Introducción 75<br>
+                    3.2 Pilas 75<br>
+                    3.2.1 Representación de pilas 76<br>
+                    3.2.2 Operaciones con pilas 78<br>
+                    3.2.3 Aplicaciones de pilas 81<br>
+                    3.2.4 La clase Pila 92<br>
+                    3.3 Colas 93<br>
+                    3.3.1 Representación de colas 94<br>
+                    3.3.2 Operaciones con colas 95<br>
+                    3.3.3 Colas circulares 99<br>
+                    3.3.4 Doble cola 102<br>
+                    3.3.5 Aplicaciones de colas 103<br>
+                    3.3.6 La clase Cola 104<br>
+  <br>
+                    Capítulo 4. Recursión 109<br>
+  <br>
+                    4.1 Introducción 109<br>
+                    4.2 El problema de las Torres de Hanoi 129<br>
+                    4.3 Recursividad en árboles 137<br>
+                    4.4 Recursividad en ordenación y búsqueda 137<br>
+                    Ejercicios 138<br>
+  <br>
+                    Capítulo 5. Listas 141<br>
+  <br>
+                    5.1 Introducción 141<br>
+                    5.2 Listas simplemente ligadas 142<br>
+                    5.2.1 Operaciones con listas simplemente ligadas 142<br>
+                    5.2.2 Recorrido de una lista simplemente ligada 145<br>
+                    5.2.3 Inserción en listas simplemente ligadas 146<br>
+                    5.2.4 Eliminación en listas simplemente ligadas 152<br>
+                    5.2.5 Búsqueda en listas simplemente ligadas 156<br>
+                    5.3 Listas circulares 158<br>
+                    5.4 Listas doblemente ligadas 159<br>
+                    5.4.1 Operaciones con listas doblemente ligadas 159<br>
+                    5.4.2 Recorrido de una lista doblemente ligada 160<br>
+                    5.4.3 Inserción en listas doblemente ligadas 160<br>
+                    5.4.4 Elirrunación en listas doblemente ligadas 163<br>
+                    5.5 Listas doblemente ligadas circulares 169<br>
+                    5.6 Aplicaciones de listas 170<br>
+                    5.7 La clase Lista 171<br>
+                    Ejercicios 173<br>
+  <br>
+                    Capítulo 6. Árboles 177<br>
+  <br>
+                    6.1 Introducción 1<br>
+                    6.2 Árboles en general 178<br>
+                    6.2.1 Características y propiedades de los árboles 178<br>
+                    6.2.2 Longitud de camino interno Yexterno 180<br>
+                    6.3 Árboles binarios 184<br>
+                    6.3.1 Árboles binarios distintos, similares y equivalentes 186<br>
+                    6.3.2 Árboles binarios completos 187<br>
+                    6.3.3 Representación de árboles generales como binarios 188<br>
+                    6.3.4 Representación de un bosque como árbol binario 192<br>
+                    6.3.5 Representación de árboles binarios en memoria 195<br>
+                    6.3.6 Operaciones en árboles binarios 196<br>
+                    6.3.7 Árboles binarios de búsqueda 203<br>
+                    6.4 Árboles balanceados 214<br>
+                    6.4.1 Inserción en árboles balanceados 216<br>
+                    6.4.2 Reestructuración del árbol balanceado 218<br>
+                    6.5 Árboles multicarninos 240<br>
+                    6.5.1 Árboles-B 241<br>
+                    6.5.2 Árboles-B+ 255<br>
+                    6.5.3 Árboles 2-4 264<br>
+                    6.6 La clase Árbol 264<br>
+                    Ejerrcicios 265<br>
+  <br>
+                    CAPÍTULO 7. Gráficas 277<br>
+  <br>
+                    7.1 Introducción 277<br>
+                    7.2 Definición de gráficas 277<br>
+                    7.3 Conceptos básicos de gráficas 279<br>
+                    7.4 Gráficas dirigidas 280<br>
+                    7.4.1 Representación de gráficas dirigidas 282<br>
+                    7.4.2 Obtención de caminos dentro de una digráfica 285<br>
+                    7.4.3 Algoritmo de Dijkstra 285<br>
+                    7.4.4 Algoritmo de Floyd 288<br>
+                    7.4.5 Algoritmo de Marshall 292<br>
+                    7.5 Gráficas no dirigidas 293<br>
+                    7.5.1 Representación de gráficas no dirigidas 294<br>
+                    7.5.2 Construcción del árbol abarcador de costo mínimo 295<br>
+                    7.5.3 Algoritmo de Prim 296<br>
+                    7.5.4 Algoritmo de Kruskal 298<br>
+                    7.6 Resolución de problemas 301<br>
+                    7.6.1 Espacio-estado 304<br>
+                    7.6.2 Métodos de búsqueda en espacio-estado 305<br>
+                    7.6.3 Métodos de búsqueda breadth-first 306<br>
+                    7.6.4 Método de búsqueda depth-first 316<br>
+                    7.7 La clase gráfica 320<br>
+  <br>
+                    Capítulo 8. Métodos de ordenación 329<br>
+  <br>
+                    8.1 Introducción 329<br>
+                    8.2 Ordenación interna 331<br>
+                    8.2.1 Ordenación por intercambio directo (burbuja) 332<br>
+                    8.2.2 Ordenación por el método de intercambio directo con señal 336<br>
+                    8.2.3 Ordenación por el método de la sacudida (shaker sort) 337<br>
+                    8.2.4 Ordenación por inserción directa 339<br>
+                    8.2.5 Ordenación por el método de inserción binaria 344<br>
+                    8.2.6 Ordenación por selección directa 346<br>
+                    8.2.7 Análisis de eficiencia de los métodos directos 349<br>
+                    8.2.8 Ordenación por el método de Shell 350<br>
+                    8.2.9 Ordenación por el método quicksort 354<br>
+                    8.2.10 Ordenación por el método heapsort (montículo) 362<br>
+                    Ordenación externa 371<br>
+                    8.3.1 Intercalación de archivos 372<br>
+                    8.3.2 Ordenación de archivos 374<br>
+                    8.3.3 Ordenación por mezcla directa 374<br>
+                    8.3.4 Ordenación por el método de mezcla equilibrada 380<br>
+  <br>
+                    Capítulo 9. Métodos de búsqueda 391<br>
+  <br>
+                    9.1 Introducción 391<br>
+                    9.2 Búsqueda interna 392<br>
+                    9.2.1 Búsqueda secuencial 393<br>
+                    9.2.2 Búsqueda binaria 397<br>
+                    9.2.3 Búsqueda por transformación de claves 402<br>
+                    9.2.4 Función hash por módulo: división 403<br>
+                    9.2.5 Función hash cuadrado 404<br>
+                    9.2.6 Función hash por plegamiento 405<br>
+                    9.2.7 Función hash por truncamiento 406<br>
+                    9.2.8 Solución de colisiones 406<br>
+                    9.2.9 Reasignación 407<br>
+                    9.2.10 Arreglos anidados 413<br>
+                    9.2.11 Encadenamiento 414<br>
+                    9.2.12 Árboles de búsqueda 418<br>
+                    Búsqueda externa 420<br>
+                    9.3.1 Búsqueda en archivos secuenciales 422<br>
+                    Comunicaciones y  redes <br>
+                    Parte I:  Descripción general.<br>
+                    Capítulo 1: Introducción a las comunicaciones de datos y redes.<br>
+                    Capítulo 2: Arquitectura de protocolos.<br>
+                    Parte II: Comunicaciones de datos.<br>
+                    Capítulo 3: Transmisión de datos.<br>
+                    Capítulo 4: Medición de transmisión.<br>
+                    Capítulo 5: TÚcnicas para la codificación de señales.<br>
+                    Capítulo 6: TÚcnicas de comunicación de datos digitales.<br>
+                    Capítulo 7: Protocolos de control del enlace de datos.<br>
+                    Capítulo 8: Multiplexación.<br>
+                    Capítulo 9: Espectro expandido.<br>
+                    Parte III: Redes de área amplia.<br>
+                    Capítulo 10: Conmutación de circuitos y de paquetes.<br>
+                    Capítulo 11: Modo de transferencia asíncrono.<br>
+                    Capítulo 12: Encaminamiento en redes conmutadas.<br>
+                    Capítulo 13: Congestión en redes de datos.<br>
+                    Capítulo 14: redes celulares inalámbricas.<br>
+                    Parte IV: Redes de área local.<br>
+                    Capítulo 15: Visión general de las redes de área local.<br>
+                    Capítulo 16: Redes de alta velocidad.<br>
+                    Capítulo 17: redes LAN inalámbricas.<br>
+                    Parte V: Protocolos de interconexión.<br>
+                    Capítulo 18: Protocolos de interconexión de redes.<br>
+                    Capítulo 19: Funcionamiento de la interconexión de redes.<br>
+                    Capítulo 20: Protocolos de transporte.<br>
+                    Capítulo 21: Seguridad en redes.<br>
+                    Capítulo 22: Aplicaciones distribuidas.<br>
+                    Apéndice A: RFC citados en este libro.<br>
+                    Apéndice B: Análisis de Fourier.<br>
+                    Apéndice C: Programación de SOCKETS.<br>
+                    Apéndice D: Proyectos par la enseñanza de comunicaciones de datos y redes de  computadores. Glosario.<br>
+                    Referencias.<br>
+                    Fundamentos de  redes <br>
+                    Parte I:  Descripción general.<br>
+                    Capítulo 1: Introducción a las comunicaciones de datos y redes.<br>
+                    Capítulo 2: Arquitectura de protocolos.<br>
+                    Parte II: Comunicaciones de datos.<br>
+                    Capítulo 3: Transmisión de datos.<br>
+                    Capítulo 4: Medición de transmisión.<br>
+                    Capítulo 5: TÚcnicas para la codificación de señales.<br>
+                    Capítulo 6: TÚcnicas de comunicación de datos digitales.<br>
+                    Capítulo 7: Protocolos de control del enlace de datos.<br>
+                    Capítulo 8: Multiplexación.<br>
+                    Capítulo 9: Espectro expandido.<br>
+                    Parte III: Redes de área amplia.<br>
+                    Capítulo 10: Conmutación de circuitos y de paquetes.<br>
+                    Capítulo 11: Modo de transferencia asíncrono.<br>
+                    Capítulo 12: Encaminamiento en redes conmutadas.<br>
+                    Capítulo 13: Congestión en redes de datos.<br>
+                    Capítulo 14: redes celulares inalámbricas.<br>
+                    Parte IV: Redes de área local.<br>
+                    Capítulo 15: Visión general de las redes de área local.<br>
+                    Capítulo 16: Redes de alta velocidad.<br>
+                    Capítulo 17: redes LAN inalámbricas.<br>
+                    Parte V: Protocolos de interconexión.</p>
+Capítulo  18: Protocolos de interconexión de redes.<br>
+Capítulo 19: Funcionamiento de la interconexión de redes.<br>
+Capítulo 20: Protocolos de transporte.<br>
+Capítulo 21: Seguridad en redes.<br>
+Capítulo 22: Aplicaciones distribuidas.<br>
+Apéndice A: RFC citados en este libro.<br>
+Apéndice B: Análisis de Fourier.<br>
+Apéndice C: Programación de SOCKETS
+<h2>&nbsp;</h2>
+         <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('estruc','','imagenes/11libro.png',1)"><img src="imagenes/libro11.png" width="199" height="264" id="estruc"></a></p>
+         
+         
+               </div>
+              </div> 
+       <div data-role="footer" data-theme="a" data-position="fixed">
+                <h4> Aplicación Tres, RMCM </h4>
+              </div>
+             </div>
+            
+ <div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+             <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1> REDES DE COMPUTADORAS</h1>
+             </div>
+             <div data-role="content" align="center">
+               <div>
+                  <div data-role="main" class="ui-content">
+       <div data-role="collapsible" data-content-theme="false">
+          <h1>COMPRAR O DESCARGAR</h1>
+          <div>
+            <p><a href="https://www.amazon.com.mx/Redes-Computadoras-Andrew-S-Tanenbaum/dp/9702601622/ref=sr_1_3?s=books&ie=UTF8&qid=1491452188&sr=1-3&keywords=redes+de+computadoras++ANDREW+S.TANENBAUM" target="_self">comprar</a></p>
+            <p><a href="https://books.google.com.mx/books?id=WWD-4oF9hjEC&pg=PA894&lpg=PA894&dq=redes+de+computadoras+autor+andrew+s.+tanenbaum&source=bl&ots=Xyl6Wat9F6&sig=FdPOx5F-nejdbgp4jOFw7U-Pxgw&hl=es&sa=X&ved=0ahUKEwiVgvH84o7TAhXLKyYKHf3_DEQQ6AEIUDAJ#v=onepage&q=redes de computadoras autor andrew s. tanenbaum&f=false" target="_self">ver</a></p>
+            <br>
+          </div>
+          <div></div>
+          </div>
+         </div> 
+         <PRE>1 INTRODUCCIÓN 
+1.1 USOS DE LAS REDES DE COMPUTADORAS 
+1.1.1 Aplicaciones de negocios 
+1.1.2 Aplicaciones domésticas 
+1.1.3 Usuarios móviles 
+1.1.4 Temas sociales 
+1.2 HARDWARE DE REDES 
+1.2.1 Redes de área local 
+1.2.2 Redes de área metropolitana 
+1.2.3 Redes de área amplia 
+1.2.4 Redes inalámbricas 
+1.2.5 Redes domésticas 
+1.2.6 Interredes 
+1.2 HARDWARE DE REDES 
+1.2.1 Redes de área local 
+1.2.2 Redes de área metropolitana 
+1.2.3 Redes de área amplia 
+1.2.4 Redes inalámbricas 
+1.2.5 Redes domésticas 
+1.2.6 Interredes 
+1.4 MODELOS DE REFERENCIA 
+1.4.1 El modelo de referencia OSI 
+1.4.2 El modelo de referencia TCP/IP 
+1.4.3 Comparación entre los modelos de referencia OSI y TCP/IP 
+1.4.4 Crítica al modelo OSI y los protocolos 
+1.4.5 Crítica del modelo de referencia TCP/IP 
+1.5 REDES DE EJEMPLO 
+1.5.1 Internet 
+1.5.2 Redes orientadas a la conexión: X.25, Frame Relay y ATM 
+1.5.3 Ethernet 
+1.5.4 LANs inalámbricas: 802.11 
+1.6 ESTANDARIZACIÓN DE REDES 
+1.6.1 Quién es quién en el mundo de las telecomunicaciones 
+1.6.2 Quién es quién en los estándares internacionales 
+1.6.3 Quién es quién en el mundo de los estándares de Internet 
+1.7 UNIDADES MÉTRICAS 
+1.8 PANORAMA DEL RESTO DEL LIBRO 
+1.9 RESUMEN 
+2 LA CAPA FÍSICA
+2.1 LA BASE TEÓRICA DE LA COMUNICACIÓN DE DATOS 
+2.1.1 El análisis de Fourier 
+2.1.2 Señales de ancho de banda limitado 
+2.1.3 La tasa de datos máxima de un canal 
+2.2 MEDIOS DE TRANSMISIÓN GUIADOS 
+2.2.1 Medios magnéticos 
+2.2.2 Par trenzado 
+2.2.3 Cable coaxial 
+2.2.4 Fibra óptica 
+2.3 TRANSMISIÓN INALÁMBRICA 
+2.3.1 El espectro electromagnético 
+2.3.2 Radiotransmisión 
+2.3.3 Transmisión por microondas 
+2.3.4 Ondas infrarrojas y milimétricas 
+2.3.5 Transmisión por ondas de luz 
+2.4 SATÉLITES DE COMUNICACIONES 
+2.4.1 Satélites geoestacionarios 
+2.4.2 Satélites de Órbita Terrestre Media 
+2.4.3 Satélites de Órbita Terrestre Baja 
+2.4.4 Satélites en comparación con fibra óptica 
+2.5 LA RED TELEFÓNICA PÚBLICA CONMUTADA 
+2.5.1 Estructura del sistema telefónico 
+2.5.2 La política de los teléfonos 
+2.5.3 El circuito local: módems, ADSL e inalámbrico 
+2.5.4 Troncales y multiplexión 
+2.5.5 Conmutación
+ 
+2.6 EL SISTEMA TELEFÓNICO MÓVIL 
+2.6.1 Teléfonos móviles de primera generación 
+2.6.2 Teléfonos móviles de segunda generación: voz digital 
+2.6.3 Teléfonos móviles de tercera generación: voz y datos digitales 
+
+2.7 TELEVISIÓN POR CABLE 169 
+2.7.1 Televisión por antena comunal 
+2.7.2 Internet a través de cable 
+2.7.3 Asignación de espectro 
+2.7.4 Módems de cable 
+2.7.5 ADSL en comparación con el cable 
+
+2.8 RESUMEN 
+
+3 LA CAPA DE ENLACE DE DATOS 
+3.1 CUESTIONES DE DISEÑO DE LA CAPA DE ENLACE DE DATOS 
+3.1.1 Servicios proporcionados a la capa de red 
+3.1.2 Entramado 
+3.1.3 Control de errores 
+3.1.4 Control de flujo 
+3.2 DETECCIÓN Y CORRECCIÓN DE ERRORES 
+3.2.1 Códigos de corrección de errores 
+3.2.2 Códigos de detección de errores 
+3.3 PROTOCOLOS ELEMENTALES DE ENLACE DE DATOS 
+3.3.1 Un protocolo símplex sin restricciones 
+3.3.2 Protocolo símplex de parada y espera 
+3.3.3 Protocolo símplex para un canal con ruido 
+3.4 PROTOCOLOS DE VENTANA CORREDIZA 
+3.4.1 Un protocolo de ventana corrediza de un bit 
+3.4.2 Protocolo que usa retroceso N 
+3.4.3 Protocolo que utiliza repetición selectiva 
+3.5 VERIFICACIÓN DE LOS PROTOCOLOS 
+3.5.1 Modelos de máquinas de estado finito 
+3.5.2 Modelos de red de Petri 
+3.6 EJEMPLOS DE PROTOCOLOS DE ENLACE DE DATOS 
+3.6.1 HDLC—Control de Enlace de Datos de Alto Nivel 
+3.6.2 La capa de enlace de datos en Internet 
+3.7 RESUMEN 
+4 LA SUBCAPA DE CONTROL DE ACCESO AL MEDIO 
+4.1 EL PROBLEMA DE ASIGNACIÓN DEL CANAL 
+4.1.1 Asignación estática de canal en LANs y MANs 
+4.1.2 Asignación dinámica de canales en LANs y MANs 
+4.2 PROTOCOLOS DE ACCESO MÚLTIPLE 
+4.2.1 ALOHA 
+4.2.2 Protocolos de acceso múltiple con detección de portadora 
+4.2.3 Protocolos libres de colisiones 
+4.2.4 Protocolos de contención limitada 
+4.2.5 Protocolos de acceso múltiple por división de longitud de onda 
+4.2.6 Protocolos de LANs inalámbricas 
+4.3 ETHERNET 
+4.3.1 Cableado Ethernet 
+4.3.2 Codificación Manchester 
+4.3.3 El protocolo de subcapa MAC de Ethernet 
+4.3.4 Algoritmo de retroceso exponencial binario 
+4.3.5 Desempeño de Ethernet 
+4.3.6 Ethernet conmutada 
+4.3.7 Fast Ethernet 
+4.3.8 Gigabit Ethernet 
+4.3.9 Estándar IEEE 802.2: control lógico del enlace 
+4.3.10 Retrospectiva de Ethernet 
+4.4 LANS INALÁMBRICAS 
+4.4.1 La pila de protocolos del 802.11 
+4.4.2 La capa física del 802.11 
+4.4.3 El protocolo de la subcapa MAC del 802.11 
+4.4.4 La estructura de trama 802.11 
+4.4.5 Servicios 
+4.5 BANDA ANCHA INALÁMBRICA 
+4.5.1 Comparación entre los estándares 802.11 y 802.16 
+4.5.2 La pila de protocolos del estándar 802.16 
+4.5.3 La capa física del estándar 802.16 306 
+4.5.4 El protocolo de la subcapa MAC del 802.16 
+4.5.5 La estructura de trama 802.16 
+4.6 BLUETOOTH 
+4.6.1 Arquitectura de Bluetooth 
+4.6.2 Aplicaciones de Bluetooth 
+4.6.3 La pila de protocolos de Bluetooth 
+4.6.4 La capa de radio de Bluetooth 314 
+4.6.5 La capa de banda base de Bluetooth 
+4.6.6 La capa L2CAP de Bluetooth 
+4.6.7 Estructura de la trama de Bluetooth 
+4.7 CONMUTACIÓN EN LA CAPA DE ENLACE DE DATOS 
+4.7.1 Puentes de 802.x a 802.y 
+4.7.2 Interconectividad local 
+4.7.3 Puentes con árbol de expansión 
+4.7.4 Puentes remotos 
+4.7.5 Repetidores, concentradores, puentes, conmutadores, enrutadores y puertas de enlace 
+4.7.6 LANs virtuales 
+
+4.8 RESUMEN  
+5 LA CAPA DE RED 
+5.1 ASPECTOS DE DISEÑO DE LA CAPA DE RED 
+5.1.1 Conmutación de paquetes de almacenamiento y reenvío 
+5.1.2 Servicios proporcionados a la capa de transporte 
+5.1.3 Implementación del servicio no orientado a la conexión 
+5.1.4 Implementación del servicio orientado a la conexión 
+5.1.5 Comparación entre las subredes de circuitos virtuales y las de datagramas 
+
+5.2 ALGORITMOS DE ENRUTAMIENTO 
+5.2.1 Principio de optimización 
+5.2.2 Enrutamiento por la ruta más corta 
+5.2.3 Inundación 
+5.2.4 Enrutamiento por vector de distancia 
+5.2.5 Enrutamiento por estado del enlace 
+5.2.6 Enrutamiento jerárquico 
+5.2.7 Enrutamiento por difusión 
+5.2.8 Enrutamiento por multidifusión 
+5.2.9 Enrutamiento para hosts móviles 
+5.2.10 Enrutamiento en redes ad hoc 
+5.2.11 Búsqueda de nodos en redes de igual a igual 
+
+5.3 ALGORITMOS DE CONTROL DE CONGESTIÓN 
+5.3.1 Principios generales del control de congestión 
+5.3.2 Políticas de prevención de congestión 
+5.3.3 Control de congestión en subredes de circuitos virtuales 
+5.3.4 Control de congestión en subredes de datagramas 
+5.3.5 Desprendimiento de carga 
+5.3.6 Control de fluctuación 
+5.4 CALIDAD DEL SERVICIO 
+5.4.1 Requerimientos 
+5.4.2 Técnicas para alcanzar buena calidad de servicio 
+5.4.3 Servicios integrados 
+5.4.4 Servicios diferenciados 
+5.4.5 Conmutación de etiquetas y MPLS 
+5.5 INTERCONECTIVIDAD 
+5.5.1 Cómo difieren las redes 
+5.5.2 Conexión de redes 
+5.5.3 Circuitos virtuales concatenados 
+5.5.4 Interconectividad no orientada a la conexión 
+5.5.5 Entunelamiento 
+5.5.6 Enrutamiento entre redes 
+5.5.7 Fragmentación 
+5.6 LA CAPA DE RED DE INTERNET 
+5.6.1 El protocolo IP 
+5.6.2 Direcciones IP 
+5.6.3 Protocolos de Control en Internet 
+5.6.4 OSPF—Protocolos de Enrutamiento de Puerta de Enlace Interior 
+5.6.5 BGP—Protocolo de Puerta de Enlace de Frontera 
+5.6.6 Multidifusión de Internet 
+5.6.7 IP móvil 
+5.6.8 IPv6 464
+5.7 RESUMEN 
+6 LA CAPA DE TRANSPORTE 
+6.1 EL SERVICIO DE TRANSPORTE 
+6.1.1 Servicios proporcionados a las capas superiores 
+6.1.2 Primitivas del servicio de transporte 
+6.1.3 Sockets de Berkeley 
+6.1.4 Un ejemplo de programación de sockets: un servidor de archivos de Internet 
+6.2 ELEMENTOS DE LOS PROTOCOLOS DE TRANSPORTE 
+6.2.1 Direccionamiento 
+6.2.2 Establecimiento de una conexión 
+6.2.3 Liberación de una conexión 
+6.2.4 Control de flujo y almacenamiento en búfer 
+6.2.5 Multiplexión 
+6.2.6 Recuperación de caídas
+ 6.3 UN PROTOCOLO DE TRANSPORTE SENCILLO 
+6.3.1 Las primitivas de servicio de ejemplo 
+6.3.2 La entidad de transporte de ejemplo 
+6.3.3 El ejemplo como máquina de estados finitos 
+6.4 LOS PROTOCOLOS DE TRANSPORTE DE INTERNET: UDP 
+6.4.1 Introducción a UDP 
+6.4.2 Llamada a procedimiento remoto 
+6.4.3 El protocolo de transporte en tiempo real 
+6.5 LOS PROTOCOLOS DE TRANSPORTE DE INTERNET: TCP 
+6.5.1 Introducción a TCP 
+6.5.2 El modelo del servicio TCP 
+6.5.3 El protocolo TCP 
+6.5.4 El encabezado del segmento TCP 
+6.5.5 Establecimiento de una conexión TCP 
+6.5.6 Liberación de una conexión TCP 
+6.5.7 Modelado de administración de conexiones TCP 
+6.5.8 Política de transmisión del TCP 
+6.5.9 Control de congestión en TCP 
+6.5.10 Administración de temporizadores del TCP 
+6.5.11 TCP y UDP inalámbricos 
+6.5.12 TCP para Transacciones 
+
+6.6 ASPECTOS DEL DESEMPEÑO 
+6.6.1 Problemas de desempeño en las redes de cómputo 
+6.6.2 Medición del desempeño de las redes 
+6.6.3 Diseño de sistemas para un mejor desempeño 
+6.6.4 Procesamiento rápido de las TPDUs 
+6.6.5 Protocolos para redes de gigabits 
+6.7 RESUMEN 
+7 LA CAPA DE APLICACIÓN
+ 7.1 DNS—EL SISTEMA DE NOMBRES DE DOMINIO 
+7.1.1 El espacio de nombres del DNS 
+7.1.2 Registros de recursos 
+7.1.3 Servidores de nombres 
+7.2 CORREO ELECTRÓNICO 
+7.2.1 Arquitectura y servicios 
+7.2.2 El agente de usuario 
+7.2.3 Formatos de mensaje 
+7.2.4 Transferencia de mensajes 
+7.2.5 Entrega final 
+7.3 WORLD WIDE WEB 
+7.3.1 Panorama de la arquitectura 
+7.3.2 Documentos Web estáticos 
+7.3.3 Documentos Web dinámicos 
+7.3.4 HTTP—Protocolo de Transferencia de Hipertexto 
+7.3.5 Mejoras de desempeño 
+7.3.6 La Web inalámbrica 
+7.4 MULTIMEDIA 
+7.4.1 Introducción al audio digital 
+7.4.2 Compresión de audio 
+7.4.3 Audio de flujo continuo 
+7.4.4 Radio en Internet 
+7.4.5 Voz sobre IP 
+7.4.6 Introducción al vídeo 
+7.4.7 Compresión de vídeo 
+7.4.8 Vídeo bajo demanda 
+7.4.9 Mbone—Red dorsal de multidifusión 
+7.5 RESUMEN 
+8 SEGURIDAD EN REDES 
+8.1 CRIPTOGRAFÍA 
+8.1.1 Introducción a la criptografía 
+8.1.2 Cifrados por sustitución 
+8.1.3 Cifrados por transposición 
+8.1.4 Rellenos de una sola vez 
+8.1.5 Dos principios criptográficos fundamentales 
+8.2 ALGORITMOS DE CLAVE SIMÉTRICA 
+8.2.1 DES—El Estándar de Encriptación de Datos 
+8.2.2 AES—El Estándar de Encriptación Avanzada 
+8.2.3 Modos de cifrado 
+8.2.4 Otros cifrados 
+8.2.5 Criptoanálisis 
+8.3 ALGORITMOS DE CLAVE PÚBLICA 
+8.3.1 El algoritmo RSA 
+8.3.2 Otros algoritmos de clave pública
+ 8.4 FIRMAS DIGITALES 
+8.4.1 Firmas de clave simétrica 
+8.4.2 Firmas de clave pública 
+8.4.3 Compendios de mensaje 
+8.4.4 El ataque de cumpleaños 
+8.5 ADMINISTRACIÓN DE CLAVES PÚBLICAS 
+8.5.1 Certificados 
+8.5.2 X.509 
+8.5.3 Infraestructuras de clave pública 
+8.6 SEGURIDAD EN LA COMUNICACIÓN 
+8.6.1 Ipsec 
+8.6.2 Firewalls 
+8.6.3 Redes privadas virtuales 
+8.6.4 Seguridad inalámbrica 
+8.7 PROTOCOLOS DE AUTENTICACIÓN 
+8.7.1 Autenticación basada en una clave secreta compartida 
+8.7.2 Establecimiento de una clave compartida: el intercambio de claves de Diffie-Hellman 
+8.7.3 Autenticación que utiliza un centro de distribución de claves 
+8.7.4 Autenticación utilizando Kerberos 
+8.7.5 Autenticación utilizando criptografía de clave pública 
+8.8 SEGURIDAD DE CORREO ELECTRÓNICO 
+8.8.1 PGP—Privacidad Bastante Buena 
+8.8.2 PEM—Correo con Privacidad Mejorada 
+8.8.3 S/MIME
+ 
+8.9 SEGURIDAD EN WEB 
+8.9.1 Amenazas 
+8.9.2 Asignación segura de nombres 
+8.9.3 SSL—La Capa de Sockets Seguros 
+8.9.4 Seguridad de código móvil 
+8.10 ASPECTOS SOCIALES 
+8.10.1 Privacidad 
+8.10.2 Libertad de expresión 
+8.10.3 Derechos de autor 
+8.11 RESUMEN 
+9 LISTA DE LECTURAS Y BIBLIOGRAFÍA 
+9.1. SUGERENCIAS DE LECTURAS ADICIONALES 
+9.1.1 Introducción y obras generales 
+9.1.2 La capa física 
+9.1.3 La capa de enlace de datos 
+9.1.4 La subcapa de control de acceso al medio 
+9.1.5 La capa de red 
+9.1.6 La capa de transporte 
+9.1.7 La capa de aplicación 
+9.1.8 Seguridad en redes
+       </pre>
+         <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('compu','','imagenes/10libro.png',1)"><img src="imagenes/libro10.png" width="199" height="264" id="compu"></a></p>
+         
+         
+               </div>
+              </div> 
+       <div data-role="footer" data-theme="a" data-position="fixed">
+                <h4> Aplicación Tres, RMCM </h4>
+              </div>
+             </div>
+            
+ <div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+             <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1> PROGRAMACION AVANZADA CON MICROSOFT SQL SERVER 2005</h1>
+             </div>
+             <div data-role="content" align="center">
+               <div>
+                  <div data-role="main" class="ui-content">
+       <div data-role="collapsible" data-content-theme="false">
+          <h1>COMPRAR O DESCARGAR</h1>
+          <div>
+            <p><a href="https://mx.casadellibro.com/libro-programacion-avanzada-con-sql-server-2005/9789701058930/1157586" target="_self">comprar</a></p>
+            <p><a href="https://www.ugiss.org/2007/11/11/programmare-microsoft-sql-server-2005/" target="_self">ver</a></p>
+            <br>
+          </div>
+          <div></div>
+          </div>
+         </div> 
+         <pre>Parte 1 Bases de datos relacionales y SQL
+ 1 Introducción a las bases de datos relacionales y a SQL
+Entienda las bases de datos relacionales 
+El modelo relacional 
+Aprenda acerca de SQL 
+La evolución de SQL 
+Tipos de instrucciones de SQL 
+Tipos de ejecución 
+El estándar SQL frente a las implementaciones de producto 
+ 2 Trabajo con el entorno SQL.
+Entienda el entorno SQL 
+Entienda los catálogos SQL
+Esquemas 
+Objetos de esquema 
+¿Qué es una base de datos?.
+Nombrado de objetos en un entorno SQL 
+Nombres calificados 
+Creación de un esquema 
+Creación de una base de datos 
+ vi Contenido
+ 3 Creación y modificación de tablas
+Creación de tablas en SQL
+Especificación de los tipos de datos en una columna 
+Tipos de datos de cadena 
+Tipos de datos numéricos 
+Tipos de datos de fecha y hora 
+Tipo de datos de intervalo
+Tipo de datos booleanos 
+Utilice tipos de datos SQL 
+Creación de tipos definidos por el usuario.
+Especificación de los valores predeterminados en una columna 
+Eliminación de tablas en SQL 
+ 4 Implementación de la integridad de datos 
+Entienda las restricciones de integridad
+Utilice restricciones NOT NULL
+Añada restricciones UNIQUE 
+Añada restricciones PRIMARY KEY 
+Añada restricciones FOREIGN KEY 
+La cláusula MATCH 
+Defina restricciones CHECK
+Defina afirmaciones 
+Creación de dominios y restricciones de dominio 
+ 5 Creación de vistas en SQL 
+Añada vistas a la base de datos 
+Definición de vistas de SQL 
+Creación de vistas actualizables
+Utilice la cláusula WITH CHECK OPTION
+Eliminación de vistas de la base de datos 
+ 6 Gestión de seguridad en la base de datos 
+Entienda el modelo de seguridad de SQL 
+Sesiones SQL 
+Acceda a objetos de base de datos 
+Creación y eliminación de roles
+Otorgue y revoque privilegios 
+Revoque privilegios 
+Otorgue y revoque roles
+Revoque roles 
+ Contenido vii
+Parte II Acceso y modificación de datos
+ 7 Consulta de datos de SQL 
+Utilice la instrucción SELECT para la recuperación de datos
+La cláusula SELECT y la cláusula FROM 
+Utilice la cláusula WHERE para definir condiciones de búsqueda 
+Defina la cláusula WHERE 
+Utilice la cláusula GROUP BY para agrupar los resultados de una consulta 
+Utilice la cláusula HAVING para especificar un grupo de condiciones
+de búsqueda 
+Utilice la cláusula ORDER BY para ordenar los resultados de una consulta 
+ 8 Modificar datos SQL 
+Insertar datos SQL 
+Insertar valores desde una instrucción SELECT 
+Actualizar datos SQL
+Actualizar valores desde una instrucción SELECT 
+Eliminar datos SQL 
+ 9 Utilizar predicados 
+Comparar datos SQL 
+Utilizar el predicado BETWEEN 
+Arrojar valores nulos 
+Arrojar valores similares 
+Hacer referencia a fuentes adicionales de datos 
+Utilizar el predicado IN 
+Utilizar el predicado EXISTS
+Determinar la cantidad de predicados de comparación
+Utilizar los predicados SOME y ANY 
+Utilizar el predicado ALL
+ 10 Trabajar con funciones y expresiones de valor 
+Utilizar funciones Set
+Utilizar la función COUNT 
+Utilizar las funciones MAX y MIN 
+Utilizar la función SUM 
+Utilizar la función AVG 
+Utilizar funciones de valor
+Trabajar con funciones de valor de cadena
+Trabajar con funciones de valor de fecha y hora 
+Utilizar expresiones de valor 
+Trabajar con expresiones de valor numéricas 
+ viii Contenido
+Utilizar la expresión de valor CASE
+Utilizar la expresión de valor CAST
+Utilizar valores especiales 
+ 11 Acceder a múltiples tablas 
+Realizar operaciones básicas join 
+Utilizar nombres de correlación 
+Crear operaciones join con más de dos tablas 
+Crear la operación cross join 
+Crear la operación self-join
+Unir tablas con nombres de columna compartidos 
+Crear el método join natural 
+Crear el método join de columna nombrada
+Utilizar el método join de condición 
+Crear la inner join 
+Crear la outer join 
+Realizar operaciones de unión 
+ 12 Utilizar subconsultas para acceder y modificar datos
+Crear subconsultas que arrojen múltiples filas 
+Utilizar el predicado IN 
+Utilizar el predicado EXISTS
+Utilizar predicados de comparación cuantificados
+Crear subconsultas que arrojen un solo valor 
+Trabajar con subconsultas correlacionadas 
+Utilizar subconsultas anidadas
+Utilizar subconsultas para modificar datos 
+Utilizar subconsultas para insertar datos 
+Utilizar subconsultas para actualizar datos
+Utilizar subconsultas para eliminar datos 
+Parte III Acceso avanzado a los datos
+ 13 Crear rutinas invocadas por SQL 
+Entender las rutinas invocadas por SQL 
+Procedimientos y funciones invocadas por SQL 
+Trabajar con la sintaxis básica 
+Crear procedimientos invocados por SQL 
+Invocar procedimientos invocados por SQL
+Agregar parámetros de entrada a sus procedimientos 
+Utilizar procedimientos para modificar datos
+Agregar variables locales a sus procedimientos.
+ Contenido ix
+Trabajar con instrucciones de control
+Crear instrucciones compuestas 
+Crear instrucciones condicionales 
+Crear instrucciones de repetición 
+Agregar parámetros de salida a sus procedimientos 
+Crear funciones invocadas por SQL 
+ 14 Crear activadores SQL
+Entender los activadores SQL 
+Contexto de ejecución del activador 
+Crear activadores SQL 
+Referenciar valores antiguos y nuevos 
+Quitar activadores SQL 
+Crear activadores de inserción 
+Crear activadores de actualización
+Crear activadores de eliminación 
+ 15 Utilizar cursores SQL
+Entender los cursores SQL
+Declarar y abrir cursores SQL 
+Declarar un cursor 
+Trabajar con elementos opcionales de la sintaxis 
+Crear una instrucción de cursor 
+Abrir y cerrar un cursor 
+Recuperar datos desde un cursor 
+Utilizar instrucciones UPDATE y DELETE posicionadas 
+Utilizar la instrucción UPDATE posicionada 
+Utilizar la instrucción DELETE posicionada 
+ 16 Manejar transacciones SQL 
+Entender las transacciones SQL
+Configurar las propiedades de la transacción 
+Especificar un nivel de aislamiento 
+Especificar un tamaño de diagnóstico 
+Crear una instrucción SET TRANSACTION
+Iniciar una transacción 
+Determinar el aplazamiento de una restricción 
+Crear puntos de recuperación en una transacción 
+Liberar un punto de recuperación
+Finalizar una transacción 
+Completar una transacción 
+Reinvertir una transacción
+ x Contenido
+ 17 Acceder a datos SQL desde un programa host 
+Invocar SQL directamente 
+Incrustar instrucciones SQL en el programa 
+Crear una instrucción SQL incrustada 
+Utilizar variables host en las instrucciones SQL 
+Recuperar datos SQL
+Manejo de errores 
+Crear módulos cliente de SQL 
+Definir módulos cliente de SQL 
+Utilizar una interfaz de nivel de llamada de SQL 
+Asignar indicadores
+Ejecutar instrucciones SQL 	
+Trabajar con variables host 
+Recuperar datos SQL 
+18 Trabajar con datos XML
+Aprender los conceptos básicos de XML 
+Aprender acerca de SQL/XML 
+El tipo de datos XML 
+Funciones SQL/XML 
+Reglas de trazado de SQL/XML
+Parte IV Apéndices
+A Respuestas a los autoexámenes 
+B Palabras clave de SQL:2006
+Palabras clave reservadas de SQL 
+Palabras clave no reservadas de SQL 
+C Código SQL utilizado en los ejercicios Pruebe esto
+Código SQL por cada ejercicio 
+La base de datos INVENTARIO </pre>
+         <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('server','','imagenes/6libro.png',1)"><img src="imagenes/libro6.png" width="199" height="264" id="server"></a></p>
+               </div>
+              </div> 
+       <div data-role="footer" data-theme="a" data-position="fixed">
+                <h4> Aplicación Tres, RMCM </h4>
+              </div>
+             </div>
+             
+ <div data-role="page" id="Pagina9" data-add-back-btn="true" data-theme="a">
+             <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1> SISTEMAS OPERATIVOS </h1>
+             </div>
+             <div data-role="content" align="center">
+               <div>
+                  <div data-role="main" class="ui-content">
+       <div data-role="collapsible" data-content-theme="false">
+          <h1>COMPRAR O DESCARGAR</h1>
+          <div>
+            <p><a href="https://www.ugiss.org/2007/11/11/programmare-microsoft-sql-server-2005/" target="_self">comprar</a></p>
+            <a href="http://www.mediafire.com/file/a3kyl6kg9cy79qo/Sistemas_OperativosLibro__Una_Vision_Aplicada__Carretero_Jess.rar" target="_self">ver</a><br>
+          </div>
+          <div></div>
+          </div>
+         </div> 
+                 <p>1. CONCEPTOS  ARQUITECTÓNICOS DE LA COMPUTADORA 1<br>
+                    1.1. Estructura y funcionamiento de la computadora 2<br>
+                    1.2. Modelo de programación de la computadora 3<br>
+                    1.2.1. Niveles de ejecución 4<br>
+                    1.2.2. Secuencia de funcionamiento de la computadora 5<br>
+                    1.2.3. Registros de control y estado 6<br>
+                    1.3. Interrupciones 7<br>
+                    1.4. El reloj 9<br>
+                    1.5. Jerarquía de memoria 10<br>
+                    1.5.1. Migración de la información 11<br>
+                    1.5.2. Parámetros característicos de la jerarquía de memoria 12<br>
+                    1.5.3. Coherencia 12<br>
+                    1.5.4. Direccionamiento 12<br>
+                    1 .5.5. La proximidad referencial 13<br>
+                    1.6. La memoria virtual 15<br>
+                    1.6.1. Concepto de memoria virtual 16<br>
+                    1.6.2. La tabla de páginas 18<br>
+                    1.6.3. Caso de varios programas activos 22<br>
+                    1.6.4. Asignación de memoria principal y memoria virtual 22<br>
+                    1.7. Entrada/salida 23<br>
+                    1.7.1. Periféricos 23<br>
+                    1.7.2. E/S y concurrencia 25<br>
+                    1.7.3. E/S y memoria virtual 27<br>
+                    1.8. Protección 27<br>
+                    1.8.1. Mecanismos de protección del procesador 27<br>
+                    1.8.2. Mecanismos de protección de memoria 28<br>
+                    1.9. Multiprocesador y multicomputadora 30<br>
+                    1.10. Puntos a recordar 31<br>
+                    1.11. Lecturas recomendadas 31<br>
+                    1.12. Ejercicios<br>
+  <br>
+                    2. INTRODUCCIÓN A LOS SISTEMAS OPERATIVOS 33<br>
+                    2.1. ¿Qué es un sistema operativo 34<br>
+                    2.1.1. Máquina desnuda 34<br>
+                    2.1.2. Funciones del sistema operativo 34<br>
+                    2.1.3. Concepto de usuario y de grupo de usuarios 37<br>
+                    2.2. Arranque de la computadora 38<br>
+                    2.3. Componentes y estructura del sistema operativo 41<br>
+                    2.3.1. Componentes del sistema operativo 41<br>
+                    2.3.2. Estructura del sistema operativo 42<br>
+                    2.4. Gestión de procesos 44<br>
+                    2.4.1. Servicios de procesos 45<br>
+                    2.5. Gestión de memoria 46<br>
+                    2.5.1. Servicios 47<br>
+                    2.6. Comunicación y sincronización entre procesos 47<br>
+                    2.6.1. Servicios de comunicación y sincronización 48<br>
+                    2.7. Gestión de la E/S 49<br>
+                    2.7.1. Servicios 50<br>
+                    2.8. Gestión de archivos y directorios 50<br>
+                    2.8.1. Servicio de archivos 50<br>
+                    2.8.2. Servicio de directorios 53<br>
+                    2.8.3. Sistema de archivos 55<br>
+                    2.9. Seguridad y protección 55<br>
+                    2.10. Activación del sistema operativo 56<br>
+                    2.11. Interfaz del programador 59<br>
+                    2.11.1. POSIX 59<br>
+                    2.11.2. Win32 60<br>
+                    2.12. Interfaz de usuario del sistema operativo 61<br>
+                    2.12.1. Funciones de la interfaz de usuario 62<br>
+                    2.12.2. Interfaces alfanuméricas 63<br>
+                    2.12.3. Interfaces gráficas 65<br>
+                    2.13. Historia de los sistemas operativos 67<br>
+                    2.14. Puntos a recordar 72<br>
+                    2.15. Lecturas recomendadas 74<br>
+                    2.16. Ejercicios 74<br>
+                    3. PROCESOS 77<br>
+                    3.1. Concepto de  proceso 78<br>
+                    3.2. Multitarea 79<br>
+                    3.2.1. Base de la multitarea 80<br>
+                    3.2.2. Ventajas de la multitarea 82<br>
+                    3.2.3. Grado de multiprogramación y necesidades de memoria principal 82<br>
+                    3.3. Información del proceso 84<br>
+                    3.3.1. Estado del procesador 84<br>
+                    3.3.2. Imagen de memoria del proceso 85<br>
+                    3.3.3. Información del BCP 90<br>
+                    3.3.4. Tablas del sistema operativo 91<br>
+                    3.4. Formación de un proceso 93<br>
+                    3.5. Estados del proceso 93<br>
+                    3.5.1. Cambio de contexto 95<br>
+                    3.6. Procesos ligeros 98<br>
+                    3.6.1. Estados del proceso ligero 99<br>
+                    3.6.2. Paralelismo 100<br>
+                    3.6.3. Diseño con procesos ligeros 101<br>
+                    3.7. Planificación 102<br>
+                    3.7.1. Algoritmos de planificación 105<br>
+                    3.7.2. Planificación en POSIX 107<br>
+                    3.7.3. Planificación en Windows NT/2000 108<br>
+                    3.8. Señales y excepciones 110<br>
+                    3.8.1. Señales 110<br>
+                    3.8.2. Excepciones 111<br>
+                    3.9. Temporizadores 112<br>
+                    3.10. Servidores y demonios 112<br>
+                    3.11. Servicios POSIX 114<br>
+                    3.11.1. Servicios POSIX para la gestión de procesos 114<br>
+                    3.11.2. Servicios POSIX de gestión de procesos ligeros 131<br>
+                    3.11.3. Servicios POSIX para la planificación de procesos 136<br>
+                    3.11.4. Servicios POSIX para gestión de señales y temporizadores 139<br>
+                    3.12. Servicios de W1N32 146<br>
+                    3.12.1. Servicios de Win32 para la gestión de procesos 146<br>
+                    3.12.2. Servicios de Win32 para la gestión de procesos ligeros 152<br>
+                    3.12.3. Servicios de planificación en Win32 154<br>
+                    3.12.4. Servicios de Win32 para el manejo de excepciones 155<br>
+                    3.12.5. Servicios de temporizadores 157<br>
+                    3.13. Puntos a recordar 159<br>
+                    3.14. Lecturas recomendadas 160<br>
+                    3.15. Ejercicios 160<br>
+  <br>
+                    4. GESTIÓN DE MEMORIA 163<br>
+  <br>
+                    4.1. Objetivos del sistema de gestión de memoria 164<br>
+                    4.2. Modelo de memoria de un proceso 172<br>
+                    4.2.1. Fases en la generación de un ejecutable 172<br>
+                    4.2.2. Mapa de memoria de un proceso 178<br>
+                    4.2.3. Operaciones sobre regiones 182<br>
+                    4.3. Esquemas de memoria basados en asignación contigua 183<br>
+                    4.4. Intercambio 186<br>
+                    4.5. Memoria virtual 187<br>
+                    4.5.1. Paginación 188<br>
+                    4.5.2. Segmentación 197<br>
+                    4.5.3. Segmentación paginada 198<br>
+                    4.5.4. Paginación por demanda 199<br>
+                    4.5.5. Políticas de reemplazo 201<br>
+                    4.5.6. Política de asignación de marcos de página 204<br>
+                    4.5.7. Hiperpaginación 205<br>
+                    4.5.8. Gestión del espacio de swap 207<br>
+                    4.5.9. Operaciones sobre las regiones de un proceso 208<br>
+                    4.6. Archivos proyectados en memoria 210<br>
+                    4.7. Servicios de gestión de memoria 212<br>
+                    4.7.1. Servicios genéricos de memoria 212<br>
+                    4.7.2. Servicios de memoria de POSIX 212<br>
+                    4.7.3. Servicios de memoria de Win32 216<br>
+                    4.8. Puntos a recordar 219<br>
+                    4.9. Lecturas recomendadas 220<br>
+                    4.10. Ejercicios 221<br>
+  <br>
+                    5. COMUNICACIÓN Y SINCRONIZACIÓN DE PROCESOS 223<br>
+  <br>
+                    5.1. Procesos concurrentes 224<br>
+                    5.1.1. Tipos de procesos concurrentes 225<br>
+                    5.2. Problemas clásicos de comunicación y sincronización 226<br>
+                    5.2.1. El problema de la sección crítica 226<br>
+                    5.2.2. Problema del productor-consumidor 230<br>
+                    5.2.3. El problema de los lectores-escritores 230<br>
+                    5.2.4. Comunicación cliente-servidor 231<br>
+                    5.3. Mecanismos de comunicación y sincronización 232<br>
+                    5.3.1. Comunicación mediante archivos 232<br>
+                    5.3.2. Tuberías 233<br>
+                    5.3.3. Sincronización mediante señales 237<br>
+                    5.3.4. Semáforos 237<br>
+                    5.3.5. Memoria compartida 242<br>
+                    5.3.6. Mutex y variables condicionales 243<br>
+                    5.4. Paso de mensajes 248<br>
+                    5.5. Aspectos de implementación de los mecanismos de sincronización 253<br>
+                    5.5.1. Implementación de la espera pasiva 254<br>
+                    5.6. Interbloqueos 257<br>
+                    5.7. Servicios POSIX 258<br>
+                    5.7.1. Tuberías 258<br>
+                    5.7.2. Semáforos POSIX 265<br>
+                    5.7.3. Mutex y variables condicionales en POSIX 270<br>
+                    5.7.4. Colas de mensajes POSIX 274<br>
+                    5.8. Servicios Wjn32 285<br>
+                    5.8.1. Tuberías 286<br>
+                    5.8.2. Secciones críticas 294<br>
+                    5.8.3. Semáforos 295<br>
+                    5.8.4. Mutex y eventos 299<br>
+                    5.8.5. Mailslots 303<br>
+                    5.9. Puntos a recordar 305<br>
+                    5.10. Lecturas recomendadas 306<br>
+                    5.11. Ejercicios 306<br>
+  <br>
+                    6. INTERBLOQUEOS 309<br>
+  <br>
+                    6.1. Los interbloqueos: una historia basada en hechos reales 310<br>
+                    6.2. Los interbloqueos en un sistema informático 311<br>
+                    6.2.1. Tipos de recursos 311<br>
+                    6.3. Un modelo del sistema 317<br>
+                    6.3.1. Representación mediante un grafo de asignación de recursos 318<br>
+                    6.3.2. Representación matricial 322<br>
+                    6.4. Definición y caracterización del interbloqueo 324<br>
+                    6.4.1. Condición necesaria y suficiente para el interbloqueo 325<br>
+                    6.5. Tratamiento del interbloqueo 326<br>
+                    6.6. Detección y recuperación del interbloqueo 327<br>
+                    6.6.1. Detección del interbloqueo 328<br>
+                    6.6.2. Recuperación del interbloqueo 334<br>
+                    6.7. Prevención del interbloqueo 334<br>
+                    6.7.1. Exclusión mutua 335<br>
+                    6.7.2. Retención y espera 336<br>
+                    6.7.3. Sin expropiación 336<br>
+                    6.7.4. Espera circular 337<br>
+                    6.8. Predicción del interbloqueo 337<br>
+                    6.8.1. Concepto de estado seguro 338<br>
+                    6.8.2. Algoritmos de predicción 339<br>
+                    6.9. Tratamiento del interbloqueo en los sistemas operativos 345<br>
+                    6.10. Puntos a recordar 347<br>
+                    6.11. Lecturas recomendadas 349<br>
+                    6.12. Ejercicios 349<br>
+  <br>
+                    7. ENTRADA/SALIDA 351<br>
+  <br>
+                    7.1. Introducción 352<br>
+                    7.2. Caracterización de los dispositivos de E/S 354<br>
+                    7.2.1. Conexión de un dispositivo de E/S a una computadora 354<br>
+                    7.2.2. Dispositivos conectados por puertos o proyectados en memoria 355<br>
+                    7.2.3. Dispositivos de bloques y de caracteres 356<br>
+                    7.2.4. E/S programada o por interrupciones 357<br>
+                    7.2.5. Mecanismos de incremento de prestaciones 361<br>
+                    7.3. Arquitectura del sistema de entrada/salida 363<br>
+                    7.3.1. Estructura y componentes del sistema de E/S 363<br>
+                    7.3.2. Software de E/S 364<br>
+                    7.4. Interfaz de aplicaciones 369<br>
+                    7.5. Almacenamiento secundario 373<br>
+                    7.5.1. Discos 374<br>
+                    7.5.2. El manejador de disco 379<br>
+                    7.5.3. Discos en memoria 384<br>
+                    7.5.4. Fiabilidad y tolerancia a fallos 385<br>
+                    7.6. Almacenamiento terciario 387<br>
+                    7.6.1. Tecnología para el almacenamiento terciario 388<br>
+                    7.6.2. Estructura y componentes de un sistema de almacenamiento<br>
+                    terciario 389<br>
+                    7.6.3. Estudio de caso: Sistema de almacenamiento de altas prestaciones<br>
+                    (HPSS) 391<br>
+                    7.7. El reloj 393<br>
+                    7.7.1. El hardware del reloj 393<br>
+                    7.7.2. El software del reloj 394<br>
+                    7.8. El terminal 397<br>
+                    7.8.1. Modo de operación del terminal 397<br>
+                    7.8.2. El hardware del terminal 398<br>
+                    7.8.3. El software del terminal 400<br>
+                    7.9. La red 404<br>
+                    7.10. Servicios de entrada/salida 405<br>
+                    7.10.1. Servicios genéricos de entrada/salida 405<br>
+                    7.10.2. Servicios de entrada/salida en POSIX 406<br>
+                    7.10.3. Servicios de entrada/salida en Win32 410<br>
+                    7.11. Puntos a recordar 414<br>
+                    7.12. Lecturas recomendadas 416<br>
+                    7.13. Ejercicios 417<br>
+  <br>
+                    8. GESTIÓN DE ARCHIVOS Y DIRECTORIOS 419<br>
+  <br>
+                    8.1. Visión de usuario del sistema de archivos 420<br>
+                    8.2. Archivos 420<br>
+                    8.2.1. Concepto de archivo 421<br>
+                    8.2.2. Nombres de archivos 423<br>
+                    8.2.3. Estructura de un archivo 424<br>
+                    8.2.4. Métodos de acceso 427<br>
+                    8.2.5. Semánticas de coutilización 428<br>
+                    8.3. Directorios 429<br>
+                    8.3.1. Concepto de directorio 429<br>
+                    8.3.2. Estructuras de directorio 432<br>
+                    8.3.3. Nombres jerárquicos 435<br>
+                    8.3.4. Construcción de la jerarquía de directorios 437<br>
+                    8.4. Servicios de archivos y directorios 438<br>
+                    8.4.1. Servicios genéricos para archivos 439<br>
+                    8.4.2. Servicios POSIX para archivos 440<br>
+                    8.4.3. Ejemplo de uso de servicios POSIX para archivos 443<br>
+                    8.4.4. Servicios Win32 para archivos 445<br>
+                    8.4.5. Ejemplo de uso de servicios Win32 para archivos 449<br>
+                    8.4.6. Servicios genéricos de directorios 451<br>
+                    8.4.7. Servicios POSIX de directorios 451<br>
+                    8.4.8. Ejemplo de uso de servicios POSIX para directorios 454<br>
+                    8.4.9. Servicios Win32 para directorios 45<br>
+                    8.4.10. Ejemplo de uso de servicios Win32 para directorios 458<br>
+                    8.5. Sistemas de archivos 459<br>
+                    8.5.1. Estructura del sistema de archivos 461<br>
+                    8.5.2. Otros tipos de sistemas de archivos 465<br>
+                    8.6. El servidor de archivos 468<br>
+                    8.6.1. Estructura del servidor de archivos 469<br>
+                    8.6.2. Estructuras de datos asociadas con la gestión de archivos 472<br>
+                    8.6.3. Mecanismos de asignación y correspondencia de bloques a archivos 474<br>
+                    8.6.4. Mecanismos de gestión de espacio libre 477<br>
+                    8.6.5. Mecanismos de incremento de prestaciones 479<br>
+                    8.6.6. Montado de sistemas de archivos e interpretación de nombres 483<br>
+                    8.6.7. Fiabilidad y recuperación 485<br>
+                    8.6.8. Otros servicios 489<br>
+                    8.7. Puntos a recordar 491<br>
+                    8.8. Lecturas recomendadas 493<br>
+                    8.9. Ejercicios 493<br>
+  <br>
+                    9. SEGURIDAD Y PROTECCIÓN 497<br>
+  <br>
+                    9.1. Conceptos de seguridad y protección 498<br>
+                    9.2. Problemas de seguridad 499<br>
+                    9.2.1. Uso indebido o malicioso de programas 500<br>
+                    9.2.2. Usuarios inexpertos o descuidados 501<br>
+                    9.2.3. Usuarios no autorizados 501<br>
+                    9.2.4. Virus 502<br>
+                    9.2.5. Gusanos 503<br>
+                    9.2.6. Rompedores de sistemas de protección 504<br>
+                    9.2.7. Bombardeo 504<br>
+                    9.3. Políticas de seguridad 505<br>
+                    9.3.1. Política militar 505<br>
+                    9.3.2. Políticas comerciales 507<br>
+                    9.3.3. Modelos de seguridad 508<br>
+                    9.4. Diseño de sistemas operativos seguros 509<br>
+                    9.4.1. Principios de diseño y aspectos de seguridad 509<br>
+                    9.4.2. Técnicas de diseño de sistemas seguros 512<br>
+                    9.4.3. Controles de seguridad externos al sistema operativo 515<br>
+                    9.4.4. Controles de seguridad del sistema operativo 518<br>
+                    9.5. Criptografía 519<br>
+                    9.5.1. Conceptos básicos 519<br>
+                    9.5.2. Sistemas de clave privada y sistemas de clave pública 522<br>
+                    9.6. Clasificaciones de seguridad 524<br>
+                    9.6.1. Clasificación del Departamento de Defensa (D0D) de Estados<br>
+                    Unidos 524<br>
+                    9.7. Seguridad y protección en sistemas operativos de propósito general 526<br>
+                    9.7.1. Autenticación de usuarios 526<br>
+                    9.7.2. Palabras clave o contraseñas 528<br>
+                    9.7.3. Dominios de protección 531<br>
+                    9.7.4. Matrices de protección 534<br>
+                    9.7.5. Listas de control de accesos 535<br>
+                    9.7.6. Capacidades 538<br>
+                    9.8. Servicios de protección y seguridad 540<br>
+                    9.8.1. Servicios genéricos 540<br>
+                    9.8.2. Servicios POSIX 541<br>
+                    9.8.3. Ejemplo de uso de los servicios de protección de POSIX 543<br>
+                    9.8.4. Servicios de Win32 545<br>
+                    9.8.5. Ejemplo de uso de los servicios de protección de Win32 548<br>
+                    9.9. El sistema de seguridad de Windows NT 550<br>
+                    9.10. Kerberos 552<br>
+                    9.11. Puntos a recordar 556<br>
+                    9.12. Lecturas recomendadas 557<br>
+                    9.13. Ejercicios 557<br>
+  <br>
+                    10. INTRODUCCIÓN A LOS SISTEMAS DISTRIBUIDOS 561<br>
+  <br>
+                    10.1. Sistemas distribuidos 562<br>
+                    10.1.1. Características de un sistema distribuido 562<br>
+                    10.1.2. Redes e interconexión 563<br>
+                    10.1.3. Protocolos de comunicación 564<br>
+                    10.2. Sistemas operativos distribuidos 566<br>
+                    10.3. Comunicación de procesos en sistemas distribuidos 570<br>
+                    10.3.1. Sockets 570<br>
+                    10.3.2. Llamadas a procedimientos remotos 582<br>
+                    10.3.3. Comunicación de grupos 592<br>
+                    10.4. Sincronización de procesos en sistemas distribuidos 593<br>
+                    10.4.1. Ordenación de eventos en sistemas distribuidos 593<br>
+                    10.4.2. Exclusión mutua en sistemas distribuidos 596<br>
+                    10.5. Gestión de procesos 598<br>
+                    10.5.1. Asignación de procesos a procesadores 598<br>
+                    10.5.2. Algoritmos de distribución de la carga 599<br>
+                    10.5.3. Planificación de procesos en sistemas distribuidos 601<br>
+                    10.6. Sistemas de archivos distribuidos 601<br>
+                    10.6.1. Nombrado 602<br>
+                    10.6.2. Métodos de acceso remotos 603<br>
+                    10.6.3. Utilización de cache en sistemas de archivos distribuidos 604<br>
+                    10.7. Gestión de memoria en sistemas distribuidos 606<br>
+                    10.8. Puntos a recordar 607<br>
+                    10.9. Lecturas recomendadas 609<br>
+                    10.10. Ejercicios 609<br>
+  <br>
+                    11. ESTUDIO DE CASOS: LINUX 611<br>
+  <br>
+                    11.1. Historia de LINUX 612<br>
+                    11.2. Características y estructura de LINUX 613<br>
+                    11.3. Gestión de procesos 614<br>
+                    11.4. Gestión de memoria 615<br>
+                    11.5. Entrada/salida 616<br>
+                    11.6. Sistema de archivos 616<br>
+                    11.7. Puntos a recordar 617<br>
+                    11.8. Lecturas recomendadas 617<br>
+  <br>
+                    12. ESTUDIO DE CASOS: WINDOWS NT 619<br>
+  <br>
+                    12.1. Introducción 620<br>
+                    12.2. Principios de diseño de Windows NT 620<br>
+                    12.3. Arquitectura de Windows NT 621 12.4. El núcleo de Windows NT 623<br>
+                    12.5. El ejecutivo de Windows NT 624<br>
+                    12.5.1. Gestor de objetos 624<br>
+                    12.5.2. Gestor de procesos 625<br>
+                    12.5.3. Gestor de memoria virtual 627<br>
+                    12.5.4. Llamada a procedimiento local 630<br>
+                    12.5.5. Gestor de entrada/salida 631<br>
+                    12.6. Subsistemas de entorno de ejecución 635<br>
+                    12.7. Sistemas de archivos de Windows NT 636<br>
+                    12.7.1. Sistemas de archivos tipo FAT 637<br>
+                    12.7.2. Sistemas de archivos de alto rendimiento(HPFS)638<br>
+                    12.7.3. NTFS 639<br>
+                    12.7.4. Comparación de los sistemas de archivos PAT, HPFS y NTFS 642<br>
+                    12.8. El subsistema de seguridad 64<br>
+                    12.8.1. Autenticación de usuarios 643<br>
+                    12.8.2. Listas de control de acceso en Windows NT 645<br>
+                    12.9. Mecanismos para tolerancia a fallos en Windows NT 646<br>
+                    12.10. Puntos a recordar 648<br>
+                    12.11. Lecturas recomendadas 649</p>
+<h2>&nbsp;</h2>
+         <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('operativos','','imagenes/7libro.png',0)"><img src="imagenes/libro7.png" width="199" height="264" id="operativos"></a></p>
+         
+               </div>
+              </div> 
+       <div data-role="footer" data-theme="a" data-position="fixed">
+                <h4> Aplicación Tres, RMCM </h4>
+              </div>
+             </div>
+            
+            
+ <div data-role="page" id="Pagina10" data-add-back-btn="true" data-theme="a">
+             <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1> FUNDAMENTOS DE REDES </h1>
+             </div>
+             <div data-role="content" align="center">
+               <div>
+                 <div data-role="main" class="ui-content">
+       <div data-role="collapsible" data-content-theme="false">
+          <h1>COMPRAR O DESCARGAR</h1>
+          <div>
+            <p><a href="https://www.casadellibro.com/libro-fundamentos-de-redes/9789701058961/1108282" target="_self">comprar</a></p>
+            <p><a href="http://www.freelibros.org/redes/fundamentos-de-redes-4ta-edicion-bruce-hallberg.html" target="_self">ver</a></p>
+            <br>
+          </div>
+          <div></div>
+          </div>
+         </div> 
+                 <p><strong>Contenido:</strong></p>
+                  <p><strong>Parte I. Fundamentos de la conectividad de redes</strong></p>
+                  <p>1. El negocio de la conectividad<br>
+                    2. Presentación de las bases<br>
+                    3. La conectividad de redes<br>
+                    4. Cableado de las redes<br>
+                    5. Conectividad de redes domésticas<br>
+                    6. Comprensión del hardware de las redes<br>
+                    7. Conexiones entre WAN<br>
+                    8. Protocolos de conectividad de redes<br>
+                    9. Servicios de directorio<br>
+                    10. Conexiones a larga distancia: acceso remoto a redes<br>
+                    11. Asegurando su red<br>
+                    12. Restablecimiento de los desastres de la red<br>
+                    13. Servidores de red: todo lo que quería saber, pero temía preguntar<br>
+                    14. Compra y administración de computadoras cliente</p>
+                  <p><strong>Parte II. Conocimiento por medio de la práctica</strong></p>
+                  <p>15. Diseño de una red<br>
+                    16. Instalación y confi guración de Windows 2000 Server<br>
+                    17. Administración de Windows 2000 Server: los fundamentos<br>
+                    18. Otros servicios de Windows 2000 Server<br>
+                    19. Windows Server 2003<br>
+                    20. Instalación de Windows Server 2003<br>
+                    21. Confi guración de Windows Server 2003<br>
+                    22. Instalación de Linux con una confi guración de servidor<br>
+                    23. Introducción a la administración de los sistemas Linux<br>
+                    24. Confi guración de un servidor web Linux con Apache</p>
+                 <h2>&nbsp;</h2>
+         <p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('redes','','imagenes/9libro.png',1)"><img src="imagenes/libro9.png" width="199" height="264" id="redes"></a></p>
+         
+               </div>
+              </div> 
+       <div data-role="footer" data-theme="a" data-position="fixed">
+                <h4> Aplicación Tres, RMCM </h4>
+              </div>
+             </div>
+            
+             
+             
+ <div data-role="page" id="Pagina11" data-add-back-btn="true" data-theme="a">
+ <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+               <h1> VISUAL C# 2010  </h1>
+             </div>
+ <div data-role="content" align="center">
+              <div>
+                 </div>
+   <div data-role="main" class="ui-content">
+     <div data-role="collapsible" data-content-theme="false">
+          <h1>COMPRAR O DESCARGAR</h1>
+          <div>
+            <p><a href="https://mx.casadellibro.com/libro-visual-c-2010-paso-a-paso/9788441528246/1805674" target="_self">comprar</a></p>
+            <p><a href="http://book.thedaytonfamily.net/37135-john-sharp-libre-libroselectronicos-descarga-pdf.html" target="_self">ver</a><br>
+            </p>
+          </div>
+          <div>
+            <p>&nbsp;</p>
+          </div>
+     </div>
+     <p>Parte I. Fundamentos de la conectividad de redes <br>
+1. El negocio de la conectividad<br>
+2. Presentación de las bases<br>
+3. La conectividad de redes<br>
+4. Cableado de las redes<br>
+5. Conectividad de redes domésticas<br>
+6. Comprensión del hardware de las redes<br>
+7. Conexiones entre WAN<br>
+8. Protocolos de conectividad de redes<br>
+9. Servicios de directorio<br>
+10. Conexiones a larga distancia: acceso remoto a redes<br>
+11. Asegurando su red<br>
+12. Restablecimiento de los desastres de la red<br>
+13. Servidores de red: todo lo que quería saber, pero temía  preguntar<br>
+14. Compra y administración de computadoras cliente <br>
+Parte II. Conocimiento por medio de la práctica </p>
+15.  Diseño de una red<br>
+16.  Instalación y confi guración de Windows 2000 Server<br>
+17.  Administración de Windows 2000 Server: los fundamentos<br>
+18.  Otros servicios de Windows 2000 Server<br>
+19.  Windows Server 2003<br>
+20.  Instalación de Windows Server 2003<br>
+21.  Confi guración de Windows Server 2003<br>
+22.  Instalación de Linux con una confi guración de servidor<br>
+23.  Introducción a la administración de los sistemas Linux<br>
+24.  Confi guración de un servidor web Linux con Apache<br>
+<p><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('visual','','imagenes/8libro.png',1)"><img src="imagenes/libro8.png" width="199" height="264" id="visual"></a></p>
+         </div>
+       
+       <div data-role="footer" data-theme="a" data-position="fixed">
+                 <h4> Aplicación tres, RMCM</h4>
+                 
+                 </div>
+                </div>
+               
+</body>
+</html>

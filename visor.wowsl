@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>8.7</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <AutoPlayVideo>false</AutoPlayVideo>
+            <Captions>true</Captions>
+            <CaptionsEffect>parallax</CaptionsEffect>
+            <Controls>true</Controls>
+            <FontSize>14</FontSize>
+            <FullScreen>false</FullScreen>
+            <GalleryName>visor</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>dribbles,cube</ImageEffect>
+            <ImageFillColor>#000000</ImageFillColor>
+            <ImageHeight>360</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files (x86)/WOW Slider/templates/backgnd/crystal/</ImageTemplate>
+            <ImageTemplateName>Crystal</ImageTemplateName>
+            <ImageWidth>640</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PlayPause>true</PlayPause>
+            <Preloader>false</Preloader>
+            <PublishFileName>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/wowslider.html</PublishFileName>
+            <PublishIndex>wowslider.html</PublishIndex>
+            <PublishPath>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>1</ShowBullets>
+            <ShowControls>false</ShowControls>
+            <ShowTooltips>1</ShowTooltips>
+            <SizeStyle>1</SizeStyle>
+            <SlideshowDelay>20</SlideshowDelay>
+            <SlideshowDuration>20</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <SwipeSupport>2</SwipeSupport>
+            <TemplateColor>#ffffff</TemplateColor>
+            <TemplateFont>Tahoma</TemplateFont>
+            <TemplateName>crystal</TemplateName>
+            <ThumbAlign>bottom</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>48</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>0</ThumbWidth>
+            <Thumbnails>false</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>0</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/net.png</url>
+                <title>net</title>
+                <filesize>1805090</filesize>
+            </Image>
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/computadores.png</url>
+                <title>computadores</title>
+                <filesize>2044873</filesize>
+            </Image>
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/datos.png</url>
+                <title>datos</title>
+                <filesize>2229144</filesize>
+            </Image>
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/fundamentos.png</url>
+                <title>fundamentos</title>
+                <filesize>3179291</filesize>
+            </Image>
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/Java.png</url>
+                <title>Java</title>
+                <filesize>506102</filesize>
+            </Image>
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/reparacion.png</url>
+                <title>reparacion</title>
+                <filesize>528253</filesize>
+            </Image>
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/Programacion.png</url>
+                <title>Programacion</title>
+                <filesize>383529</filesize>
+            </Image>
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/Redes.png</url>
+                <title>Redes</title>
+                <filesize>2840941</filesize>
+            </Image>
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/operativos.png</url>
+                <title>operativos</title>
+                <filesize>197990</filesize>
+            </Image>
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/server.png</url>
+                <title>server</title>
+                <filesize>202746</filesize>
+            </Image>
+            <Image>
+                <url>F:/Rosa Maria/DAM/Parcial2/aplicaciones/app3/Visual.png</url>
+                <title>Visual</title>
+                <filesize>299752</filesize>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>
